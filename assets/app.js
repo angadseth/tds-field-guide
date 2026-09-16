@@ -161,7 +161,7 @@
       $("#readyBar").style.width = (n / total * 100) + "%";
       var msg;
       if (n === 0) msg = "Tick the boxes above.";
-      else if (n <= 4) msg = "Honest answer: take TDS in a later term. Spend this one on Python, the terminal and Git, then come back.";
+      else if (n <= 4) msg = "It will be a tough term. You can still take it, since GA0 is not a gate, but use the bootcamp to fix Python, the terminal and Git first. The course team would suggest a later term.";
       else if (n <= 7) msg = "Borderline. Do all five bootcamp days properly and take GA0 seriously. Your GA0 score decides.";
       else if (n < total) msg = "Good shape. Fill the gaps during the bootcamp and do GA0 early to confirm.";
       else msg = "You're ready. Do GA0 anyway, then help a friend through the bootcamp.";

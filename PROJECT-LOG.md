@@ -53,6 +53,18 @@ Angad's own GA/P1/P2/ROE notes. Discourse needs a login, so it was not used.
   unreadable in dark mode. Replaced with the chapter number circled in blue pen + bold title, nothing painted
   behind text. `tests/toc.mjs` asserts no background, contrast >= 7 and the ring showing, in both themes.
 
+- **Content change requested by Angad + Bharat (same day), reverses two earlier decisions:**
+  - GA0 is a *self-check, not a gate*: skip it or score low and you can still continue (ch05, hero note, FAQ, checklist verdict).
+  - New ink slab under the hero: "In TDS, everything is allowed. Except in the End Term." (AI, copying, solvers,
+    hacking the questions...). Added one boundary line: hack the questions, not people or IITM's other systems.
+  - Resources now include solvers with source code (Angad's GA7 + GA8 solvers, GT Indian's TDS Portal Solver ->
+    GyaanFlow/tds-roe-solver-t12026), Bharat's + Angad's GitHub, Bharat's TDS-P2, the P2 Evaluator
+    (tds-p2-evaluator.onrender.com), and Bharat's ET prep site (hypemonk.github.io/tds-et-prep).
+  - ET chapter: May 2026 pattern (80 marks / 90 min, 30 MCQ/MSQ = 39 + 9 written LLM-graded = 41, no negative),
+    attributed to Bharat's ET prep notes.
+  - Ch10: new "Offline evaluation" row (P1 half marks offline from agent logs, bot tested after deadline, P2 sections offline).
+  - All new links opened first: every one returned 200, all solver source repos are public.
+
 **Still open / not done:**
 - Dates are the May 2026 term's. When the Sep 2026 course page publishes its schedule, update the chart (`ROWS` in
   `assets/app.js`), the GA table, ROE/ET dates and the "May 2026 edition" label.

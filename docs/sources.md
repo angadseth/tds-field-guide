@@ -42,3 +42,14 @@ Checked 2026-09-16.
 ## Not usable
 
 - Discourse (`discourse.onlinedegree.iitm.ac.in`) returns 403 without login.
+
+## Added 2026-09-16 (Angad + Bharat's request)
+
+| Fact / link | Source |
+|---|---|
+| GA0 is a self-check, not a gate: skipping or a low score does not stop you continuing | Angad and Bharat (took the May 2026 term). The official site only *advises* below-40% students to take TDS later. |
+| "Everything is allowed except in the End Term" | Angad and Bharat. Official support: tds.s-anand.net "Copying & ChatGPT are encouraged … Share code. Even in projects, assignments, and exams (except the final in-person end-term exam)" and "It's a practical course. Just get it done. 'How' matters less." |
+| May 2026 ET pattern: 80 marks, 90 min, 30 MCQ/MSQ (39) + 9 written LLM-graded "applied AI judgment" (41), no negative marking | https://hypemonk.github.io/tds-et-prep/ (Bharat), attributed on the page |
+| Offline evaluation: P1 cloud tasks half marks on Check + rest offline from agent logs; bot tested after deadline; P2 sections offline | Angad's P1 notes (`tds-p1-q5-guide/README.md`), P2 exam bundle text "Requested sections are evaluated offline" |
+| TDS Portal Solver by GT Indian, source `GyaanFlow/tds-roe-solver-t12026` | the solver page's own footer links (checked, repo public) |
+| Bharat's GitHub, TDS-P2 repo, P2 Evaluator, ET prep | links from Bharat; each opened, all HTTP 200 |

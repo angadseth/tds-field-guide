@@ -12,10 +12,14 @@ Add to it as you work, not at the end.
    not how to write a FastAPI server. If a sentence needs a programmer to understand it, rewrite it.
 2. **Language = simple English, the tone of a friendly senior.** No Hinglish on the site (students from all
    over India read it). Chat replies to Angad stay in roman Hinglish.
-3. **Guides only, no solvers, no answers.** Link Angad's approach-only guides (GA4, GA5, GA7 handbook, P1, P2)
-   and official links. Never link a solver, or any repo or site that hands out answers. Open a repo and read it
-   before linking it: a name ending in "Guide" is not proof that it is approach-only.
-4. **End Term = official info only.** Do not invent the paper pattern.
+3. **Guides AND solvers, with source code** (changed 2026-09-16, Angad + Bharat). Link Bharat's (github.com/HypeMonk)
+   and Angad's (github.com/angadseth) GitHub, their guides, solutions and solvers, plus GT Indian's TDS Portal Solver
+   with its source. Every solver entry gets a warning that it was built for last term's questions. Open every link
+   before adding it.
+4. **"Everything is allowed except in the End Term"** is a headline message (the ink slab under the hero). Keep the
+   boundary line with it: hack the questions, not people or IITM's other systems.
+   **End Term:** official rules + the May 2026 pattern from Bharat's ET prep site, attributed to it.
+   **GA0 is a self-check, not a gate** (Angad + Bharat): skipping or a low score does not stop anyone continuing.
 5. **Design is ours, not AI-default.** "Senior's notebook": graph paper, ink, yellow highlighter on key numbers,
    red pen for mistakes, handwritten margin notes (Kalam). No purple gradients, glass cards, emoji-heavy cards,
    or generic hero-with-three-feature-cards layout.

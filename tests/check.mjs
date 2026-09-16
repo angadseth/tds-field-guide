@@ -68,7 +68,9 @@ for (const s of setups) {
   ok(s.ctx.colorScheme === "dark" ? bg === "rgb(19, 21, 25)" : bg === "rgb(246, 246, 241)", `theme background matches colour scheme (${bg})`);
 
   await page.screenshot({ path: path.join(SHOTS, `${s.name}-top.png`) });
-  await page.screenshot({ path: path.join(SHOTS, `${s.name}-full.png`), fullPage: true });
+  // Chrome cannot capture a very tall page in one image. The full-page shot is only for eyeballing, so skip it then.
+  try { await page.screenshot({ path: path.join(SHOTS, `${s.name}-full.png`), fullPage: true }); }
+  catch (e) { console.log(`  info  full-page screenshot skipped: ${e.message.split("\n")[0]}`); }
 
   ok(errors.length === 0, `no console errors ${errors.length ? JSON.stringify(errors.slice(0, 5)) : ""}`);
   await ctx.close();
@@ -132,7 +134,7 @@ console.log("\n[behaviour]");
   // readiness checklist
   const boxes = page.locator("#readiness input[type=checkbox]");
   for (let i = 0; i < 3; i++) await boxes.nth(i).check();
-  ok((await page.locator("#readyVerdict").innerText()).includes("later term"), "3 of 10 -> suggests a later term");
+  ok((await page.locator("#readyVerdict").innerText()).includes("tough term"), "3 of 10 -> warns of a tough term, GA0 is not a gate");
   for (let i = 3; i < 10; i++) await boxes.nth(i).check();
   ok((await page.locator("#readyCount").textContent()) === "10 of 10", "counter reaches 10 of 10");
 
