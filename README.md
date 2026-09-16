@@ -30,4 +30,4 @@ node check.mjs                      # layout, themes, calculator maths, links
 node check.mjs https://angadseth.github.io/tds-field-guide/
 ```
 
-Made by Angad Jangir · IIT Madras BS
+Made by Bharat and Angad
