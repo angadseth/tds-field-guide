@@ -3,8 +3,8 @@
 A website for students who are about to take **Tools in Data Science (TDS)** at IIT Madras BS.
 It is not a solver and not an answer dump. Live at https://angadseth.github.io/tds-field-guide/
 
-Read `PROJECT-LOG.md` before touching anything. It records what was done, what was decided, and what is still open.
-Add to it as you work, not at the end.
+Read `memory/MEMORY.md` first (local only, not in the repo), then `PROJECT-LOG.md`. The log records what was done, what was
+decided, and what is still open. Add to both as you work, not at the end. Raw research lives in `research/` (also local only).
 
 ## Rules Angad set (2026-09-16)
 
@@ -25,7 +25,8 @@ Add to it as you work, not at the end.
    or generic hero-with-three-feature-cards layout.
 6. **Every fact needs a source.** Numbers (weights, dates, eligibility) come from the official course page or
    the grading document. See `docs/sources.md`. If a fact cannot be checked, say "last term" or leave it out.
-7. **Never publish secrets.** Angad's TDS memory has API keys and tokens. None of it goes anywhere near this repo.
+7. **Credit:** the footer says exactly "Made by Bharat and Angad Jangir".
+8. **Never publish secrets.** Angad's TDS memory has API keys and tokens. None of it goes anywhere near this repo.
 
 ## Stack
 

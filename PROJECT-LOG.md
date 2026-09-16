@@ -65,6 +65,11 @@ Angad's own GA/P1/P2/ROE notes. Discourse needs a login, so it was not used.
   - Ch10: new "Offline evaluation" row (P1 half marks offline from agent logs, bot tested after deadline, P2 sections offline).
   - All new links opened first: every one returned 200, all solver source repos are public.
 
+- **Memory saved for future sessions** (Angad asked): `memory/` in this folder, Khelo-style — MEMORY.md index + project-overview,
+  decisions (incl. reversals), people-and-links (Bharat = HypeMonk, GT Indian = GyaanFlow), design-system (+ 8 traps hit),
+  testing-and-gotchas, open-items. Research from the temp scratchpad moved to `research/2026-09-16/` with a README.
+  Both folders gitignored because the repo is public.
+
 **Still open / not done:**
 - Dates are the May 2026 term's. When the Sep 2026 course page publishes its schedule, update the chart (`ROWS` in
   `assets/app.js`), the GA table, ROE/ET dates and the "May 2026 edition" label.
@@ -73,3 +78,4 @@ Angad's own GA/P1/P2/ROE notes. Discourse needs a login, so it was not used.
 - Grade bands (S 90 … E 40, U below 40) come from the BS handbook via search, not the TDS section of the grading doc.
   The page tells readers to confirm them.
 - The WhatsApp link preview has not been tried in the real WhatsApp app (og tags + og.png are live).
+- **Asked Angad, no answer yet:** did GA0 actually count in marks (best 7 of 9 / first 5)? And is "gt ka solver" GT Indian's portal solver?
