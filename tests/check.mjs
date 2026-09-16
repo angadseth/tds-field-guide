@@ -85,26 +85,27 @@ console.log("\n[behaviour]");
 
   // eligibility widget in chapter 05
   const elig = (i) => page.locator(`[data-elig="${i}"]`);
-  await elig(0).fill("50");
-  await elig(1).fill("30");
-  await elig(2).fill("40");
+  await elig(1).fill("50");
+  await elig(2).fill("30");
+  await elig(3).fill("40");
   ok((await page.locator("#eligOut").innerText()).toLowerCase().includes("need 1 more"), "3 scores -> asks for 1 more");
-  await elig(3).fill("20");
+  await elig(4).fill("20");
   let t = await page.locator("#eligOut").innerText();
   ok(/not eligible/i.test(t) && t.includes("35"), `50,30,40,20 -> not eligible, average 35 (${t.replace(/\s+/g, " ")})`);
-  await elig(4).fill("80");
+  await elig(5).fill("80");
   t = await page.locator("#eligOut").innerText();
   ok(/^eligible/i.test(t.trim()) && t.includes("50"), `+80 -> best 4 = 80,50,40,30 -> eligible, 50 (${t.replace(/\s+/g, " ")})`);
-  ok((await page.locator('[data-ga="0"]').inputValue()) === "50", "chapter 05 scores also appear in the calculator");
+  ok((await page.locator('[data-ga="1"]').inputValue()) === "50", "chapter 05 scores also appear in the calculator");
+  ok((await page.locator('[data-elig="0"], [data-ga="0"]').count()) === 0, "GA0 has no score box anywhere (its marks don't count)");
 
   // calculator in chapter 09
-  const gas = [80, 70, 60, 50, 40, 90, 100, 0, 10];
-  for (let i = 0; i < 9; i++) await page.locator(`[data-ga="${i}"]`).fill(String(gas[i]));
+  const gas = [80, 70, 60, 50, 40, 90, 100, 0]; // GA1..GA8
+  for (let i = 1; i <= 8; i++) await page.locator(`[data-ga="${i}"]`).fill(String(gas[i - 1]));
   await page.locator('[data-part="roe"]').fill("50");
   await page.locator('[data-part="p1"]').fill("60");
   await page.locator('[data-part="p2"]').fill("70");
   const ga = await page.locator("#oGa").innerText();
-  ok(ga.startsWith("70"), `best 7 of 9 = (100+90+80+70+60+50+40)/7 = 70 (${ga.split("\n")[0]})`);
+  ok(ga.startsWith("70"), `best 7 of GA1..GA8 = (100+90+80+70+60+50+40)/7 = 70 (${ga.split("\n")[0]})`);
   let T = await page.locator("#oT").innerText();
   ok(T.startsWith("50") && T.includes("D"), `T without ET = 0.2*(70+50+60+70) = 50, band D (${T.replace(/\s+/g, " ")})`);
   ok((await page.locator("#oNeed").innerText()).includes("past 40"), "already past 40 -> says so, and that ET is still required");
@@ -113,7 +114,7 @@ console.log("\n[behaviour]");
   ok(T.startsWith("56"), `with ET 30 -> T = 56 (${T.split("\n")[0]})`);
   ok((await page.locator("#oNeed").innerText()) === "", "need-message disappears once ET is entered");
   const e2 = await page.locator("#oElig").innerText();
-  ok(/^eligible/i.test(e2.trim()), `calculator eligibility uses GA0..GA4 = 80,70,60,50,40 -> eligible (${e2.replace(/\s+/g, " ")})`);
+  ok(/^eligible/i.test(e2.trim()), `calculator eligibility uses GA1..GA5 = 80,70,60,50,40 -> eligible (${e2.replace(/\s+/g, " ")})`);
 
   await page.locator('[data-part="et"]').fill("");
   await page.locator('[data-part="roe"]').fill("0");
@@ -121,15 +122,15 @@ console.log("\n[behaviour]");
   await page.locator('[data-part="p2"]').fill("0");
   ok((await page.locator("#oNeed").innerText()).includes("even 100"), "impossible target is explained, not shown as a number");
 
-  await page.locator('[data-ga="0"]').fill("150");
-  await page.locator('[data-ga="0"]').blur();
-  ok((await page.locator('[data-ga="0"]').inputValue()) === "100", "a score above 100 is clamped to 100");
+  await page.locator('[data-ga="1"]').fill("150");
+  await page.locator('[data-ga="1"]').blur();
+  ok((await page.locator('[data-ga="1"]').inputValue()) === "100", "a score above 100 is clamped to 100");
 
   // persistence
   await page.reload({ waitUntil: "networkidle" });
-  ok((await page.locator('[data-ga="6"]').inputValue()) === "100", "scores survive a reload");
+  ok((await page.locator('[data-ga="7"]').inputValue()) === "100", "scores survive a reload");
   await page.locator("#calcClear").click();
-  ok((await page.locator('[data-ga="6"]').inputValue()) === "" && (await page.locator('[data-elig="0"]').inputValue()) === "", "Clear empties both widgets");
+  ok((await page.locator('[data-ga="7"]').inputValue()) === "" && (await page.locator('[data-elig="1"]').inputValue()) === "", "Clear empties both widgets");
 
   // readiness checklist
   const boxes = page.locator("#readiness input[type=checkbox]");
@@ -175,7 +176,7 @@ console.log("\n[behaviour]");
   const errs = [];
   p2.on("pageerror", (e) => errs.push(String(e)));
   await p2.goto(BASE, { waitUntil: "networkidle" });
-  await p2.locator('[data-elig="0"]').fill("90");
+  await p2.locator('[data-elig="1"]').fill("90");
   ok(errs.length === 0 && (await p2.locator("#gantt .gantt__row").count()) === 13, `works with storage blocked ${errs.join(" ")}`);
   await ctx2.close();
 

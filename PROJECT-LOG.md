@@ -77,6 +77,11 @@ Angad's own GA/P1/P2/ROE notes. Discourse needs a login, so it was not used.
   unofficial relays (prompts and code pass through them), daily batches / can stop, GitHub age + referral links.
   FAQ "Do I have to pay for AI" points to it. New `tests/credits.mjs` (4 viewports + storage blocked) ALL PASSED.
 
+- **Angad confirmed: GA0 marks were NOT counted in May 2026**, and "gt ka solver" = GT Indian's. Site updated everywhere:
+  hero fact, ch02 table, ch05 ("GA0 marks don't count. GA1 to GA5 do." + new doubt), eligibility check now GA1–GA5,
+  ch06 mistakes + "no marks" tag on GA0 row, ch09 bullet/cite + calculator GA1–GA8 (best 7), ch10 row, doubts, readiness verdict.
+  Assumption told to Angad: eligibility = GA1–GA5, GA score = best 7 of GA1–GA8. Tests updated (+ "no GA0 box anywhere"). All 4 suites pass.
+
 **Still open / not done:**
 - Dates are the May 2026 term's. When the Sep 2026 course page publishes its schedule, update the chart (`ROWS` in
   `assets/app.js`), the GA table, ROE/ET dates and the "May 2026 edition" label.
@@ -85,4 +90,4 @@ Angad's own GA/P1/P2/ROE notes. Discourse needs a login, so it was not used.
 - Grade bands (S 90 … E 40, U below 40) come from the BS handbook via search, not the TDS section of the grading doc.
   The page tells readers to confirm them.
 - The WhatsApp link preview has not been tried in the real WhatsApp app (og tags + og.png are live).
-- **Asked Angad, no answer yet:** did GA0 actually count in marks (best 7 of 9 / first 5)? And is "gt ka solver" GT Indian's portal solver?
+- ~~Asked Angad~~ answered: GA0 did not count; gt = GT Indian. Only the GA1–GA5 / best-7-of-8 reading is still an assumption.

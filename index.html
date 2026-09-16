@@ -69,7 +69,7 @@
     <div class="hero__note">
       <dl class="facts">
         <div><dt>Final score</dt><dd>5 parts<span>Each is <mark>20%</mark>: GAs, ROE, P1, P2, end term.</span></dd></div>
-        <div><dt>Assignments</dt><dd>Best 7 of 9<span>GA0 to GA8. Two can go wrong.</span></dd></div>
+        <div><dt>Assignments</dt><dd>Best 7 count<span>GA0 is only a self-check, no marks. A bad week or two is survivable.</span></dd></div>
         <div><dt>ROE</dt><dd>45 min<span>Online, open internet, not proctored.</span></dd></div>
         <div><dt>End term</dt><dd>In person<span>No internet. You must attend it to get a grade.</span></dd></div>
       </dl>
@@ -186,7 +186,7 @@
               <tr><td>Where you submit</td><td class="other">The SEEK portal</td><td class="tds">Its own TDS exam portal. <strong>SEEK is not used for submissions.</strong></td></tr>
               <tr><td>Using ChatGPT or Claude</td><td class="other">Counts as plagiarism unless allowed</td><td class="tds"><mark>Allowed and encouraged</mark>, everywhere except the in-person end term</td></tr>
               <tr><td>Copying from friends</td><td class="other">Honour code violation</td><td class="tds">Allowed. Share code, work in groups. Understand what you copy.</td></tr>
-              <tr><td>Weekly work</td><td class="other">Assignments on a fixed weekly rhythm</td><td class="tds">9 GAs whose windows overlap. Best 7 count.</td></tr>
+              <tr><td>Weekly work</td><td class="other">Assignments on a fixed weekly rhythm</td><td class="tds">Weekly GAs whose windows overlap. Only the best 7 count, and GA0 carries no marks.</td></tr>
               <tr><td>Quizzes</td><td class="other">Quiz 1 and Quiz 2 at exam centres</td><td class="tds">No quizzes at all</td></tr>
               <tr><td>Online exam</td><td class="other">OPPE: proctored, needs the system test</td><td class="tds">ROE: 45 min, open internet, not proctored, no system test</td></tr>
               <tr><td>Your questions</td><td class="other">Same for everyone</td><td class="tds">Generated from your email, so your numbers differ from your friend's</td></tr>
@@ -293,20 +293,20 @@
           <li>Run a small web server, and call an AI model to classify sentiment</li>
           <li>"Get an LLM to say Yes", which is a prompt-writing puzzle</li>
         </ul>
-        <h3>Skipping is allowed, but a good GA0 still helps</h3>
+        <h3>GA0 marks don't count. GA1 to GA5 do.</h3>
         <ol class="steps">
-          <li><strong>It is one of your 9 GAs.</strong> Your GA score is the average of your best 7 out of GA0 to GA8. Skip GA0 and it simply counts as one of the two you drop.</li>
-          <li><strong>It sits among the first five GAs.</strong> To sit the end term, the average of your <mark>best 4 of the first 5 GAs must be at least 40</mark>. In May 2026 the first five were GA0 to GA4. Skip GA0 and GA1 to GA4 have to carry that average on their own.</li>
+          <li><strong>GA0 adds nothing to your final score.</strong> In May 2026 its marks were not added anywhere, not to your GA average and not to end-term eligibility. It is only a check for you, so a low score costs you nothing but the warning.</li>
+          <li><strong>The first GAs that matter are GA1 to GA5.</strong> To sit the end term, the average of your <mark>best 4 of the first 5 GAs must be at least 40</mark>. With GA0 out, those five are GA1 to GA5. Don't skip them.</li>
         </ol>
         <div class="sheet" id="elig">
-          <div class="sheet__title"><h4>Eligibility check</h4><span class="eyebrow">best 4 of first 5</span></div>
+          <div class="sheet__title"><h4>Eligibility check</h4><span class="eyebrow">best 4 of GA1&ndash;GA5</span></div>
           <p style="font-size:.92rem;color:var(--ink-2)">Type your scores out of 100. Leave a box empty if that GA isn't out yet.</p>
           <div class="calc__grid">
-            <label class="field"><span>GA0</span><input inputmode="decimal" data-elig="0" placeholder="&ndash;" aria-label="GA0 score"></label>
             <label class="field"><span>GA1</span><input inputmode="decimal" data-elig="1" placeholder="&ndash;" aria-label="GA1 score"></label>
             <label class="field"><span>GA2</span><input inputmode="decimal" data-elig="2" placeholder="&ndash;" aria-label="GA2 score"></label>
             <label class="field"><span>GA3</span><input inputmode="decimal" data-elig="3" placeholder="&ndash;" aria-label="GA3 score"></label>
             <label class="field"><span>GA4</span><input inputmode="decimal" data-elig="4" placeholder="&ndash;" aria-label="GA4 score"></label>
+            <label class="field"><span>GA5</span><input inputmode="decimal" data-elig="5" placeholder="&ndash;" aria-label="GA5 score"></label>
           </div>
           <div aria-live="polite" id="eligOut"><span class="stamp stamp--wait">Waiting for scores</span></div>
         </div>
@@ -314,6 +314,7 @@
         <div class="faq faq--inline">
           <details><summary>Which email should I log in with?</summary><div class="ans"><p>Your IITM student email. Your questions are generated from your email and your marks are saved against it. Logging in with a personal Gmail means your work goes to the wrong place.</p></div></details>
           <details><summary>How many times can I try?</summary><div class="ans"><p>You can press <strong>Check</strong> as often as you like before the deadline. What counts is your <strong>last saved</strong> submission, so press <strong>Save</strong> after every improvement.</p></div></details>
+          <details><summary>Does GA0 count in my marks?</summary><div class="ans"><p>No. In May 2026, GA0's marks were not added to the GA average or to end-term eligibility. It's a self-check. Take it anyway, because it tells you honestly whether you're ready.</p></div></details>
           <details><summary>I got 35% (or skipped GA0). Can I still continue?</summary><div class="ans"><p>Yes. GA0 is a self-check, not a gate, and nothing stops you from moving ahead. The course team does advise students below 40% to think about a later term, so be honest about why you scored low. If you ran out of time but understood the tasks once you sat down with them, you'll be fine. If you didn't understand what the questions were asking, use the bootcamp to fix that before GA1.</p></div></details>
           <details><summary>GA0 looks too hard. Is the whole course like this?</summary><div class="ans"><p>GA0 covers the basics. The weekly GAs go further (deploying apps, AI agents, cloud). The difference is that you'll have a week of practice before each one. If GA0 feels impossible even with AI helping you, that tells you something.</p></div></details>
           <details><summary>I joined late. Will GA0's deadline be extended?</summary><div class="ans"><p>Don't plan around it. The May 2026 grading document said plainly that assignment deadlines would not be changed.</p></div></details>
@@ -354,7 +355,7 @@
         <h3>Mistakes that cost people marks</h3>
         <ul class="redpen">
           <li>Pressing Check, seeing full marks, closing the tab, and never pressing Save.</li>
-          <li>Skipping GA0 to GA4 because "best 7 of 9". Those decide your end-term eligibility.</li>
+          <li>Skipping GA1 to GA5 because "only the best 7 count". Those five decide your end-term eligibility.</li>
           <li>Pasting a URL that works when you're logged in but not for a stranger.</li>
           <li>"Improving" a value the question wrote down exactly. If the question gives a specific word or format, use it as written.</li>
           <li>Starting two days before the deadline, when three other things are due that week.</li>
@@ -365,7 +366,7 @@
           <table class="ledger">
             <thead><tr><th>GA</th><th>Theme</th><th>Example questions</th><th>Open</th></tr></thead>
             <tbody>
-              <tr><td>GA0</td><td>Entrance: the basics</td><td>Move and rename files &middot; SQL: average salary by department &middot; Get an LLM to say Yes</td><td class="mono">13 May &ndash; 21 Jun</td></tr>
+              <tr><td>GA0</td><td>Entrance: the basics <span class="tag">no marks</span></td><td>Move and rename files &middot; SQL: average salary by department &middot; Get an LLM to say Yes</td><td class="mono">13 May &ndash; 21 Jun</td></tr>
               <tr><td>GA1</td><td>Development tools</td><td>Git time travel &middot; Host your portfolio on GitHub Pages &middot; Debug and improve a failing prompt</td><td class="mono">17 &ndash; 28 Jun</td></tr>
               <tr><td>GA2</td><td>Deployment</td><td>Deploy a CORS-aware metrics API &middot; Expose a local LLM through a tunnel &middot; Multi-container app with Compose</td><td class="mono">28 Jun &ndash; 8 Jul</td></tr>
               <tr><td>GA3</td><td>LLM engineering</td><td>Invoice data extraction API &middot; Semantic search ranking &middot; Spin up an LLM command-line tool</td><td class="mono">5 &ndash; 22 Jul</td></tr>
@@ -508,7 +509,7 @@
           <li><strong>In person</strong>, at an exam centre. May 2026: Sunday 13 September.</li>
           <li><strong>No internet, no AI, no friends.</strong> The only assessment where copying isn't allowed.</li>
           <li><strong>Worth 20%</strong>, and <strong>mandatory</strong>. You only get a course grade if you attend it.</li>
-          <li><strong>You must be eligible:</strong> best 4 of the first 5 GAs averaging at least 40 (see chapter 05).</li>
+          <li><strong>You must be eligible:</strong> best 4 of GA1 to GA5 averaging at least 40 (see chapter 05).</li>
         </ul>
         <span class="note">Miss only the end term, with everything else done, and you get an "I" (incomplete). You can then write just the ET in a later term.</span>
         <p>The official documents don't publish a paper pattern. According to <a href="https://hypemonk.github.io/tds-et-prep/">Bharat's ET prep notes</a>, the May 2026 end term was a <mark>theory paper: 80 marks in 90 minutes</mark>. It had 30 MCQ/MSQ questions (39 marks) and 9 written "applied AI judgment" questions (41 marks) graded by an LLM, with no negative marking. So the course is practical all term, and then the end term tests theory. Prepare for that switch.</p>
@@ -517,13 +518,12 @@
         </ul>
 
         <h3>How your final score is calculated</h3>
-        <blockquote class="pull">T = 0.2 &times; GA + 0.2 &times; ROE + 0.2 &times; P1 + 0.2 &times; P2 + 0.2 &times; ET<cite>May 2026 grading document. GA = average of your best 7 of 9 GAs.</cite></blockquote>
+        <blockquote class="pull">T = 0.2 &times; GA + 0.2 &times; ROE + 0.2 &times; P1 + 0.2 &times; P2 + 0.2 &times; ET<cite>May 2026 grading document. GA = average of your best 7 GAs. GA0 was not counted.</cite></blockquote>
 
         <div class="sheet" id="calc">
           <div class="sheet__title"><h4>Marks calculator</h4><span class="eyebrow">scores out of 100</span></div>
-          <p class="calc__sub">Graded assignments</p>
+          <p class="calc__sub">Graded assignments (GA0 has no marks)</p>
           <div class="calc__grid">
-            <label class="field"><span>GA0</span><input inputmode="decimal" data-ga="0" placeholder="&ndash;" aria-label="GA0 score"></label>
             <label class="field"><span>GA1</span><input inputmode="decimal" data-ga="1" placeholder="&ndash;" aria-label="GA1 score"></label>
             <label class="field"><span>GA2</span><input inputmode="decimal" data-ga="2" placeholder="&ndash;" aria-label="GA2 score"></label>
             <label class="field"><span>GA3</span><input inputmode="decimal" data-ga="3" placeholder="&ndash;" aria-label="GA3 score"></label>
@@ -568,7 +568,7 @@
             <thead><tr><th>What</th><th>Before</th><th>May 2026</th></tr></thead>
             <tbody>
               <tr><td>Readiness check</td><td class="other">GA1 doubled as the pre-requisite check (Sep 2025)</td><td class="tds">A separate <strong>GA0 self-check exam</strong> (not a gate) and a <strong>5-day bootcamp</strong></td></tr>
-              <tr><td>GAs that count</td><td class="other">Best 4 of 7 (May 2025), best 5 of 8 (Sep 2025)</td><td class="tds"><mark>Best 7 of 9</mark></td></tr>
+              <tr><td>GAs that count</td><td class="other">Best 4 of 7 (May 2025), best 5 of 8 (Sep 2025)</td><td class="tds"><mark>Best 7 count</mark>. The official page says "best 7 of 9", but GA0's marks were not added.</td></tr>
               <tr><td>Weights</td><td class="other">May 2025: GAs 15%, end term 25%</td><td class="tds">All five parts at 20%</td></tr>
               <tr><td>Syllabus</td><td class="other">Sep 2025: dev tools, deployment, AI coding, LLMs, data sourcing, preparation, analysis, visualisation</td><td class="tds">Rebuilt around AI: RAG, agents, LLM security, CI/CD and cloud, ML on the cloud. Data preparation, analysis and visualisation are no longer separate modules.</td></tr>
               <tr><td>How you learn</td><td class="other">Written lessons per topic</td><td class="tds">Challenge-first. The content is "only a topic reference", and every question has an Ask AI button.</td></tr>
@@ -701,7 +701,7 @@
           <details data-cat="rules"><summary>Is copying from friends allowed? Isn't that cheating?</summary><div class="ans"><p>In TDS it's allowed, even encouraged: "Share code. Even in projects, assignments, and exams (except the final in-person end-term exam)." The reason is that real work is done in teams. In practice your questions are generated from your email, so copying the final answer doesn't work anyway. Copy the method and understand it.</p></div></details>
           <details data-cat="rules"><summary>Where do I submit? I can't find TDS assignments on SEEK.</summary><div class="ans"><p>That's expected. TDS uses its own exam portal. All GA, project and ROE links are on <a href="https://tds.s-anand.net/">tds.s-anand.net</a>. SEEK is not used for TDS submissions.</p></div></details>
           <details data-cat="ga"><summary>I pressed Check and got full marks. Am I done?</summary><div class="ans"><p>Not until you press <strong>Save</strong>. Check only evaluates. Your last saved submission is what counts.</p></div></details>
-          <details data-cat="ga"><summary>Can I skip some GAs?</summary><div class="ans"><p>Only the best 7 of 9 count, so two can go badly. But GA0 to GA4 decide end-term eligibility, so don't skip those. If you're going to skip, skip a late one.</p></div></details>
+          <details data-cat="ga"><summary>Can I skip some GAs?</summary><div class="ans"><p>Only your best 7 GAs count, so a bad week can be dropped. But GA1 to GA5 decide end-term eligibility, so don't skip those. GA0 carries no marks at all. If you're going to skip, skip a late one.</p></div></details>
           <details data-cat="ga"><summary>My friend and I did the same thing but got different answers. Who is wrong?</summary><div class="ans"><p>Probably nobody. Questions are personalised from your email, so your data and your expected answer are different from theirs.</p></div></details>
           <details data-cat="ga"><summary>The checker gave me 0 but my app works. Why?</summary><div class="ans"><p>Usually the problem isn't your logic, it's the setup around it: the wrong link, a server that fell asleep, something that only works while you're logged in, or an output format slightly different from what the question wrote. Open your link in incognito, re-read every hidden section of the question, and match the exact format.</p></div></details>
           <details data-cat="ga"><summary>The AI grader marked my answer unfairly. Can I appeal?</summary><div class="ans"><p>No. "LLM evaluations are final. No appeal." The skill being tested is writing answers that hold up no matter how the AI reads them: clear structure, the exact sections requested, no vague sentences.</p></div></details>

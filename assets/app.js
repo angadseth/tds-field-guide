@@ -162,7 +162,7 @@
       var msg;
       if (n === 0) msg = "Tick the boxes above.";
       else if (n <= 4) msg = "It will be a tough term. You can still take it, since GA0 is not a gate, but use the bootcamp to fix Python, the terminal and Git first. The course team would suggest a later term.";
-      else if (n <= 7) msg = "Borderline. Do all five bootcamp days properly and take GA0 seriously. Your GA0 score decides.";
+      else if (n <= 7) msg = "Borderline. Do all five bootcamp days properly and take GA0 seriously. It has no marks, but your score will tell you honestly.";
       else if (n < total) msg = "Good shape. Fill the gaps during the bootcamp and do GA0 early to confirm.";
       else msg = "You're ready. Do GA0 anyway, then help a friend through the bootcamp.";
       $("#readyVerdict").textContent = msg;
@@ -189,10 +189,10 @@
     return t >= 90 ? "S" : t >= 80 ? "A" : t >= 70 ? "B" : t >= 60 ? "C" : t >= 50 ? "D" : t >= 40 ? "E" : "U";
   }
 
-  // Average of the best 4 of GA0..GA4. Needs at least 4 scores.
+  // Average of the best 4 of GA1..GA5. GA0 carried no marks in May 2026. Needs at least 4 scores.
   function eligibility() {
     var got = [];
-    for (var i = 0; i < 5; i++) { var v = num(marks["ga" + i]); if (v !== null) got.push(v); }
+    for (var i = 1; i <= 5; i++) { var v = num(marks["ga" + i]); if (v !== null) got.push(v); }
     if (got.length < 4) return { ready: false, count: got.length };
     got.sort(function (a, b) { return b - a; });
     var avg = (got[0] + got[1] + got[2] + got[3]) / 4;
@@ -202,7 +202,7 @@
   function eligHtml(e) {
     if (!e.ready) return stamp("wait", "Need " + (4 - e.count) + " more");
     return stamp(e.ok ? "ok" : "no", e.ok ? "Eligible" : "Not eligible") +
-      '<small>Best 4 of first 5 average: ' + fmt(e.avg) + (e.ok ? "" : ". You need 40.") + "</small>";
+      '<small>Best 4 of GA1&ndash;GA5 average: ' + fmt(e.avg) + (e.ok ? "" : ". You need 40.") + "</small>";
   }
 
   var inputs = $$("[data-ga],[data-elig],[data-part]");
@@ -224,7 +224,7 @@
     if (eligOut) eligOut.innerHTML = eligHtml(e);
 
     var gas = [], entered = 0;
-    for (var i = 0; i < 9; i++) {
+    for (var i = 1; i <= 8; i++) {
       var v = num(marks["ga" + i]);
       if (v !== null) entered++;
       gas.push(v === null ? 0 : v);
@@ -236,7 +236,7 @@
     if (!oGa) return;
 
     if (entered === 0) oGa.innerHTML = "&ndash;<small>Enter GA scores</small>";
-    else oGa.innerHTML = fmt(gaa) + "<small>" + entered + " of 9 entered" + (entered < 7 ? ". Missing ones count as 0." : ".") + "</small>";
+    else oGa.innerHTML = fmt(gaa) + "<small>" + entered + " of 8 entered" + (entered < 7 ? ". Missing ones count as 0." : ".") + "</small>";
 
     var parts = ["roe", "p1", "p2", "et"].map(function (k) { return num(marks[k]); });
     var anything = entered > 0 || parts.some(function (p) { return p !== null; });

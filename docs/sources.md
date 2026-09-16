@@ -61,3 +61,11 @@ Checked 2026-09-16.
 | AgentRouter: GitHub sign-up, $175 wallet credit with the referral link ($125 without), Claude/GPT in daily batches, "402 Budget pool quota has been exhausted" | https://github.com/HypeMonk/ROE-hunt/blob/main/Free-credits.md (Bharat), read in full |
 | Five more providers (GoRouter, JustDoWork, KKtoken, SeekAI, Tabitoken): up to $100 to $200, GitHub account older than 1 year, referral sign-up links | https://github.com/HypeMonk/Free-Credits (Bharat), each file read |
 | "Unofficial third-party relays, not Anthropic or OpenAI" | the relays' own domains (agentrouter.org etc.); added as a safety line |
+
+## Confirmed by Angad, 2026-09-16 night
+
+| Fact | Source |
+|---|---|
+| GA0's marks were NOT counted in May 2026 (not in the GA average, not in ET eligibility) | Angad (took the term). The official pages only say "best 7 of 9" and "best 4 of first 5" without naming GAs; the grading doc calls GA0 the "Entrance Exam" |
+| So ET eligibility = best 4 of GA1–GA5, and the calculator uses the best 7 of GA1–GA8 | inference from the above, told to Angad |
+| "gt ka solver" = GT Indian's TDS Portal Solver | Angad |
