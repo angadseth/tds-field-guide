@@ -70,6 +70,13 @@ Angad's own GA/P1/P2/ROE notes. Discourse needs a login, so it was not used.
   testing-and-gotchas, open-items. Research from the temp scratchpad moved to `research/2026-09-16/` with a README.
   Both folders gitignored because the repo is public.
 
+- **Free AI credits** (Angad + Bharat: "unique pop up ya section"): a tear-off newspaper coupon ($175, scissors, perforated stub)
+  as the first thing in ch11 (`#free-credits`), plus a yellow ticket stub pinned bottom-right that appears only after the hero,
+  steps aside while the real coupon is on screen, nudges once, has an x (remembered), and opens the same coupon in a `<dialog>`
+  (cloned from ch11 so they never disagree). Links: Bharat's AgentRouter guide + Free-Credits repo. Added three fine-print lines:
+  unofficial relays (prompts and code pass through them), daily batches / can stop, GitHub age + referral links.
+  FAQ "Do I have to pay for AI" points to it. New `tests/credits.mjs` (4 viewports + storage blocked) ALL PASSED.
+
 **Still open / not done:**
 - Dates are the May 2026 term's. When the Sep 2026 course page publishes its schedule, update the chart (`ROWS` in
   `assets/app.js`), the GA table, ROE/ET dates and the "May 2026 edition" label.

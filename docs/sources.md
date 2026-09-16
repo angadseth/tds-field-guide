@@ -53,3 +53,11 @@ Checked 2026-09-16.
 | Offline evaluation: P1 cloud tasks half marks on Check + rest offline from agent logs; bot tested after deadline; P2 sections offline | Angad's P1 notes (`tds-p1-q5-guide/README.md`), P2 exam bundle text "Requested sections are evaluated offline" |
 | TDS Portal Solver by GT Indian, source `GyaanFlow/tds-roe-solver-t12026` | the solver page's own footer links (checked, repo public) |
 | Bharat's GitHub, TDS-P2 repo, P2 Evaluator, ET prep | links from Bharat; each opened, all HTTP 200 |
+
+## Added 2026-09-16 evening: free AI credits
+
+| Fact / link | Source |
+|---|---|
+| AgentRouter: GitHub sign-up, $175 wallet credit with the referral link ($125 without), Claude/GPT in daily batches, "402 Budget pool quota has been exhausted" | https://github.com/HypeMonk/ROE-hunt/blob/main/Free-credits.md (Bharat), read in full |
+| Five more providers (GoRouter, JustDoWork, KKtoken, SeekAI, Tabitoken): up to $100 to $200, GitHub account older than 1 year, referral sign-up links | https://github.com/HypeMonk/Free-Credits (Bharat), each file read |
+| "Unofficial third-party relays, not Anthropic or OpenAI" | the relays' own domains (agentrouter.org etc.); added as a safety line |

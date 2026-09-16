@@ -312,4 +312,50 @@
     });
     paintFaq();
   }
+
+  /* ---------- free AI credits: corner ticket -> coupon dialog ---------- */
+
+  var ticket = $("#ticket"), dialog = $("#creditsDialog"), coupon = $("[data-coupon]");
+  if (ticket && dialog && coupon && typeof dialog.showModal === "function") {
+    // The dialog shows the same coupon as chapter 11, so the two can never disagree.
+    $("#creditsSlot").appendChild(coupon.cloneNode(true));
+
+    var hidden = store.get("tfg-ticket-hidden", false);
+    var seen = store.get("tfg-ticket-seen", false);
+    var pastHero = false, couponOnScreen = false;
+
+    var paintTicket = function () {
+      if (hidden) { ticket.hidden = true; return; }
+      ticket.hidden = false;
+      // Stay out of the way on the first screen, and while the real coupon is already visible.
+      ticket.classList.toggle("is-away", !pastHero || couponOnScreen);
+      if (pastHero && !couponOnScreen && !seen) {
+        ticket.classList.add("is-new");
+        seen = true;
+        store.set("tfg-ticket-seen", true);
+      }
+    };
+
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) { pastHero = !es[0].isIntersecting; paintTicket(); }).observe($(".hero"));
+      new IntersectionObserver(function (es) { couponOnScreen = es[0].isIntersecting; paintTicket(); }).observe(coupon);
+    } else {
+      pastHero = true;
+      paintTicket();
+    }
+
+    $("#ticketOpen").addEventListener("click", function () { dialog.showModal(); });
+    $("#creditsClose").addEventListener("click", function () { dialog.close(); });
+    // Clicking the dark backdrop closes it too.
+    dialog.addEventListener("click", function (e) { if (e.target === dialog) dialog.close(); });
+    dialog.addEventListener("close", function () { $("#ticketOpen").focus(); });
+
+    $("#ticketHide").addEventListener("click", function () {
+      hidden = true;
+      store.set("tfg-ticket-hidden", true);
+      paintTicket();
+    });
+  } else if (ticket) {
+    ticket.hidden = true;
+  }
 })();

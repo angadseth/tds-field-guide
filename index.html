@@ -590,7 +590,30 @@
         <h2 id="resources-h">Resources and links</h2>
       </header>
       <div class="prose">
-        <h3 style="margin-top:0">Official</h3>
+        <h3 style="margin-top:0" id="free-credits">Free AI credits</h3>
+        <div class="coupon" data-coupon>
+          <div class="coupon__stub" aria-hidden="true">
+            <span class="coupon__up">up to</span>
+            <span class="coupon__amt">$175</span>
+            <span class="coupon__what">free AI credits</span>
+          </div>
+          <div class="coupon__body">
+            <p class="coupon__eyebrow">Cut this out &middot; shared by Bharat</p>
+            <p class="coupon__title">Free AI credits for Claude Code, Cursor and Codex</p>
+            <p class="coupon__text">Sign up on AgentRouter with a GitHub account and get <strong>$175 in credits</strong> for models like Claude Opus, GPT and GLM. Bharat's guide walks through every step. Five more providers give <strong>up to $100 to $200</strong> each.</p>
+            <p class="coupon__go">
+              <a class="coupon__btn" href="https://github.com/HypeMonk/ROE-hunt/blob/main/Free-credits.md">Get $175: setup guide <span aria-hidden="true">&rarr;</span></a>
+              <a class="coupon__btn coupon__btn--ghost" href="https://github.com/HypeMonk/Free-Credits">More providers <span aria-hidden="true">&rarr;</span></a>
+            </p>
+            <ul class="coupon__fine">
+              <li>These are unofficial third-party relays, not Anthropic or OpenAI. Your prompts and code pass through their servers, so keep private data and your real API keys out.</li>
+              <li>Claude and GPT come in daily batches. If you see "402 quota exhausted", wait for the next batch or switch to GLM. The credits can stop any time.</li>
+              <li>Most providers want a GitHub account older than one year. The sign-up links in the guides are referral links with a bonus.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Official</h3>
         <ul class="links">
           <li><a href="https://tds.s-anand.net/"><b>Course site</b><em>Schedule, content, every GA, project and ROE link. Bookmark it.</em><span class="url">tds.s-anand.net</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
           <li><a href="https://github.com/sanand0/tools-in-data-science-public/discussions"><b>Question discussions on GitHub</b><em>A public thread for almost every question. Read these when stuck.</em><span class="url">github.com/sanand0/tools-in-data-science-public/discussions</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
@@ -683,7 +706,7 @@
           <details data-cat="ga"><summary>The checker gave me 0 but my app works. Why?</summary><div class="ans"><p>Usually the problem isn't your logic, it's the setup around it: the wrong link, a server that fell asleep, something that only works while you're logged in, or an output format slightly different from what the question wrote. Open your link in incognito, re-read every hidden section of the question, and match the exact format.</p></div></details>
           <details data-cat="ga"><summary>The AI grader marked my answer unfairly. Can I appeal?</summary><div class="ans"><p>No. "LLM evaluations are final. No appeal." The skill being tested is writing answers that hold up no matter how the AI reads them: clear structure, the exact sections requested, no vague sentences.</p></div></details>
           <details data-cat="ga"><summary>Will deadlines be extended?</summary><div class="ans"><p>Plan as if they won't. Extensions have happened in past terms, but the May 2026 grading document said assignment deadlines would not be changed.</p></div></details>
-          <details data-cat="ga"><summary>Do I have to pay for AI tools or hosting?</summary><div class="ans"><p>Most tasks can be done with free tiers. Some cloud tasks need an account that asks for billing or card verification, such as Google Cloud Storage in Project 1. Set these up early and watch for any charges.</p></div></details>
+          <details data-cat="ga"><summary>Do I have to pay for AI tools or hosting?</summary><div class="ans"><p>Most tasks can be done with free tiers. For AI, see the <a href="#free-credits">free AI credits</a> in chapter 11 ($100 to $200 per provider). Some cloud tasks need an account that asks for billing or card verification, such as Google Cloud Storage in Project 1. Set these up early and watch for any charges.</p></div></details>
           <details data-cat="ga"><summary>When will my scores show up?</summary><div class="ans"><p>According to the course's marks dashboard, GA and ROE scores are updated one to two days after the deadline. Project scores can take a week or two, because they take longer to evaluate.</p></div></details>
           <details data-cat="exam"><summary>Is the ROE really impossible?</summary><div class="ans"><p>It's designed so that nobody finishes. That's fine. Scan everything, take the quick wins, use AI first, and save as you go. See chapter 07.</p></div></details>
           <details data-cat="exam"><summary>Is the ROE proctored? Do I need the system compatibility test?</summary><div class="ans"><p>No and no. The ROE is a non-proctored, open-internet exam, and TDS doesn't need the OPPE system test.</p></div></details>
@@ -717,6 +740,22 @@
     </div>
   </div>
 </footer>
+
+<div class="ticket" id="ticket" hidden>
+  <button class="ticket__open" id="ticketOpen" type="button" aria-haspopup="dialog" aria-controls="creditsDialog">
+    <span class="ticket__amt">$175</span>
+    <span class="ticket__what">free AI<br>credits</span>
+  </button>
+  <button class="ticket__x" id="ticketHide" type="button" aria-label="Hide the free credits ticket">&times;</button>
+</div>
+
+<dialog class="coupon-dialog" id="creditsDialog" aria-labelledby="creditsDialogTitle">
+  <div class="coupon-dialog__bar">
+    <p class="coupon-dialog__title" id="creditsDialogTitle">Free AI credits</p>
+    <button class="coupon-dialog__close" type="button" id="creditsClose" aria-label="Close">&times;</button>
+  </div>
+  <div id="creditsSlot"></div>
+</dialog>
 
 <script src="assets/app.js" defer></script>
 </body>
