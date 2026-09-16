@@ -46,7 +46,7 @@ Angad's own GA/P1/P2/ROE notes. Discourse needs a login, so it was not used.
   dark headline letters on a dark page (unreadable). Fixed (full-height stroke in dark mode, less bleed so a trailing
   colon stays visible) and added `tests/darkmarks.mjs`. Commit `9e14d85`, re-verified live.
 
-- Credit changed on Angad's request: footer + README now say **"Made by Bharat and Angad"** (commit `9e570cb`),
+- Credit changed on Angad's request: footer + README now say **"Made by Bharat and Angad Jangir"** (full name added on request),
   checked live on desktop and phone-dark.
 
 **Still open / not done:**
