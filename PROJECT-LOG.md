@@ -46,6 +46,9 @@ Angad's own GA/P1/P2/ROE notes. Discourse needs a login, so it was not used.
   dark headline letters on a dark page (unreadable). Fixed (full-height stroke in dark mode, less bleed so a trailing
   colon stays visible) and added `tests/darkmarks.mjs`. Commit `9e14d85`, re-verified live.
 
+- Credit changed on Angad's request: footer + README now say **"Made by Bharat and Angad"** (commit `9e570cb`),
+  checked live on desktop and phone-dark.
+
 **Still open / not done:**
 - Dates are the May 2026 term's. When the Sep 2026 course page publishes its schedule, update the chart (`ROWS` in
   `assets/app.js`), the GA table, ROE/ET dates and the "May 2026 edition" label.
