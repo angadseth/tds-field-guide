@@ -168,6 +168,15 @@ mark {
   margin: 14px 0 22px;
 }
 .hero h1 mark { padding: 0 0.08em; margin: 0 -0.08em; background-size: 100% 42%; background-position: 0 88%; }
+
+/* On dark paper the ink is light, so a half-height stroke would leave dark letters on a dark page.
+   In dark mode the highlighter covers the whole line and the text stays dark on yellow. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) mark { background-size: 100% 100%; background-position: 0 0; padding: 0 0.08em; margin: 0 -0.08em; }
+  :root:not([data-theme="light"]) .hero h1 mark { background-size: 100% 88%; background-position: 0 70%; }
+}
+:root[data-theme="dark"] mark { background-size: 100% 100%; background-position: 0 0; padding: 0 0.08em; margin: 0 -0.08em; }
+:root[data-theme="dark"] .hero h1 mark { background-size: 100% 88%; background-position: 0 70%; }
 .lede { font-size: 1.14rem; color: var(--ink-2); max-width: 36em; }
 
 .hero__note { position: relative; padding-left: 0; }
