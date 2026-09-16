@@ -40,4 +40,17 @@ Angad's own GA/P1/P2/ROE notes. Discourse needs a login, so it was not used.
   leaking into the next chapter (clearfix), sticky FAQ bar eating phone screen, chart labels over the crunch line.
 - Pushed to `angadseth/tds-field-guide` (public), Pages enabled from `main` root.
 
-**Status:** waiting for the first Pages build, then run `node tests/check.mjs <live url>`.
+- **LIVE: https://angadseth.github.io/tds-field-guide/** — `check.mjs` ALL PASSED against the live URL
+  (19 external links respond, share image 200).
+- Bug found only by looking at the live phone-dark screenshot: the half-height highlighter left the top half of the
+  dark headline letters on a dark page (unreadable). Fixed (full-height stroke in dark mode, less bleed so a trailing
+  colon stays visible) and added `tests/darkmarks.mjs`. Commit `9e14d85`, re-verified live.
+
+**Still open / not done:**
+- Dates are the May 2026 term's. When the Sep 2026 course page publishes its schedule, update the chart (`ROWS` in
+  `assets/app.js`), the GA table, ROE/ET dates and the "May 2026 edition" label.
+- Discourse is login-only, so no student threads were used. The doubts come from official docs and Angad's notes.
+- End term: official rules only, no paper pattern (Angad's choice).
+- Grade bands (S 90 … E 40, U below 40) come from the BS handbook via search, not the TDS section of the grading doc.
+  The page tells readers to confirm them.
+- The WhatsApp link preview has not been tried in the real WhatsApp app (og tags + og.png are live).
