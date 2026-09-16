@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TDS Field Guide</title>
+<meta name="description" content="A senior's guide to Tools in Data Science (IIT Madras BS): what the course is, GA0 and eligibility, how to do a GA, the ROE, projects, the end term, and what changed in May 2026.">
+<meta name="theme-color" content="#f6f6f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131519" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://angadseth.github.io/tds-field-guide/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TDS Field Guide">
+<meta property="og:title" content="TDS Field Guide: read this before Tools in Data Science">
+<meta property="og:description" content="GA0, GAs, the ROE, projects, the end term and your marks, explained by a senior. Written after the May 2026 term.">
+<meta property="og:url" content="https://angadseth.github.io/tds-field-guide/">
+<meta property="og:image" content="https://angadseth.github.io/tds-field-guide/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f6f6f1'/%3E%3Cpath d='M3 21.5c8-1.6 17-1.8 26-.6l-.4 6.2c-8.8-1-17.4-.8-25.4.8z' fill='%23ffe24a'/%3E%3Cpath d='M6 5h20v5h-7.2v18h-5.6V10H6z' fill='%2316181d'/%3E%3C/svg%3E">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("tfg-theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Kalam:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#what">Skip to the guide</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="#top" aria-label="TDS Field Guide, back to top">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 21.5c8-1.6 17-1.8 26-.6l-.4 6.2c-8.8-1-17.4-.8-25.4.8z" fill="var(--hl)"/><path d="M6 5h20v5h-7.2v18h-5.6V10H6z" fill="var(--ink)"/></svg>
+      <span class="brand__name">TDS Field Guide</span>
+      <span class="brand__ed">May 2026 edition</span>
+    </a>
+    <span class="topbar__sp"></span>
+    <button class="iconbtn" id="theme" type="button" aria-label="Switch colour theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg>
+      <span class="lbl" id="themeLbl">Auto</span>
+    </button>
+    <a class="iconbtn" href="https://github.com/angadseth/tds-field-guide" aria-label="Source on GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+      <span class="lbl">GitHub</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__grid">
+    <div>
+      <p class="eyebrow">IIT Madras BS &middot; Diploma &middot; BSSE2002</p>
+      <h1 id="hero-title">Before you start <mark>Tools in Data Science</mark>, read this.</h1>
+      <p class="lede">What a senior would tell you over chai: what the course really is, how the assignments work, how to get through the ROE, what the projects want, and what you need for the end term. Written after the May 2026 term and checked against the official course page.</p>
+      <p class="disclaimer">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 2.5 18 17H2z" stroke-linejoin="round"/><path d="M10 8v4.2M10 14.4v.1" stroke-linecap="round"/></svg>
+        <span>This is not an official course page. Dates and rules change every term, so always check <a href="https://tds.s-anand.net/">tds.s-anand.net</a> and your term's grading document.</span>
+      </p>
+    </div>
+    <div class="hero__note">
+      <dl class="facts">
+        <div><dt>Final score</dt><dd>5 parts<span>Each is <mark>20%</mark>: GAs, ROE, P1, P2, end term.</span></dd></div>
+        <div><dt>Assignments</dt><dd>Best 7 of 9<span>GA0 to GA8. Two can go wrong.</span></dd></div>
+        <div><dt>ROE</dt><dd>45 min<span>Online, open internet, not proctored.</span></dd></div>
+        <div><dt>End term</dt><dd>In person<span>No internet. You must attend it to get a grade.</span></dd></div>
+      </dl>
+      <p class="hand" style="margin-top:18px">Haven't registered yet? Read <a href="#ga0">chapter 05</a> first. It decides whether you should take TDS this term.</p>
+    </div>
+  </div>
+</section>
+
+<section class="term" aria-labelledby="term-title">
+  <div class="term__head">
+    <h2 id="term-title">The May 2026 term, drawn to scale</h2>
+    <span class="eyebrow">13 May &rarr; 13 Sep 2026</span>
+  </div>
+  <div class="term__sheet">
+    <p class="scrollhint">Swipe sideways to see the whole term &rarr;</p>
+    <div class="term__scroll" tabindex="0" aria-label="Timeline of the May 2026 term">
+      <div class="gantt" id="gantt"></div>
+    </div>
+    <div class="term__foot">
+      <span class="key"><i class="ga"></i>Graded assignment window</span>
+      <span class="key"><i class="p"></i>Project</span>
+      <span class="key"><i class="roe"></i>ROE (one afternoon)</span>
+      <span class="key"><i class="et"></i>End term</span>
+      <span class="key"><i class="cr"></i>The crunch</span>
+    </div>
+  </div>
+  <p class="hand term__note">See the yellow strip? From 17 to 22 July, Project 1, GA3, GA4 and GA5 were all open at the same time. Nobody warns you about this. Now you know.</p>
+</section>
+
+<div class="book">
+  <nav class="toc" aria-label="Chapters">
+    <p class="eyebrow">Chapters</p>
+    <ol id="toc">
+      <li><a href="#what"><span>01</span><b>What TDS is</b></a></li>
+      <li><a href="#different"><span>02</span><b>How it differs from other courses</b></a></li>
+      <li><a href="#learn"><span>03</span><b>What you will learn</b></a></li>
+      <li><a href="#pre-skills"><span>04</span><b>Skills to have first</b></a></li>
+      <li><a href="#ga0"><span>05</span><b>GA0 and eligibility</b></a></li>
+      <li><a href="#ga"><span>06</span><b>How to do a GA</b></a></li>
+      <li><a href="#roe"><span>07</span><b>The ROE, and staying safe</b></a></li>
+      <li><a href="#projects"><span>08</span><b>Projects</b></a></li>
+      <li><a href="#et"><span>09</span><b>End term and your marks</b></a></li>
+      <li><a href="#changed"><span>10</span><b>What changed in May 2026</b></a></li>
+      <li><a href="#resources"><span>11</span><b>Resources and links</b></a></li>
+      <li><a href="#doubts"><span>12</span><b>Doubts, answered</b></a></li>
+    </ol>
+  </nav>
+
+  <div class="chapters">
+    <details class="toc-m">
+      <summary>Chapters</summary>
+      <ol>
+        <li><a href="#what"><span>01</span>What TDS is</a></li>
+        <li><a href="#different"><span>02</span>How it differs</a></li>
+        <li><a href="#learn"><span>03</span>What you will learn</a></li>
+        <li><a href="#pre-skills"><span>04</span>Skills to have first</a></li>
+        <li><a href="#ga0"><span>05</span>GA0 and eligibility</a></li>
+        <li><a href="#ga"><span>06</span>How to do a GA</a></li>
+        <li><a href="#roe"><span>07</span>The ROE</a></li>
+        <li><a href="#projects"><span>08</span>Projects</a></li>
+        <li><a href="#et"><span>09</span>End term and marks</a></li>
+        <li><a href="#changed"><span>10</span>What changed</a></li>
+        <li><a href="#resources"><span>11</span>Resources</a></li>
+        <li><a href="#doubts"><span>12</span>Doubts</a></li>
+      </ol>
+    </details>
+
+    <!-- 01 ─────────────────────────────────────────── -->
+    <section class="chapter" id="what" aria-labelledby="what-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">01</span>
+        <span class="eyebrow">Chapter 01 <a class="chapter__link" href="#what" aria-label="Link to chapter 01">#</a></span>
+        <h2 id="what-h">What TDS is</h2>
+      </header>
+      <div class="prose">
+        <p>Tools in Data Science is a diploma-level course in the IIT Madras BS programme. Most courses teach you the theory. TDS teaches you the <strong>tools people actually use at work</strong>: the terminal, Git and GitHub, putting an app on the internet, working with AI models, scraping data from websites, and running things on the cloud.</p>
+        <span class="note">The course content is only a reference. You learn by doing the assignments, not by watching lectures first.</span>
+        <p>It is designed by <strong>S Anand</strong> (co-founder of Gramener) and taught with instructors and TAs. Here is how the course describes itself:</p>
+        <ul>
+          <li><strong>AI will teach you.</strong> You get challenges and learn on your own, using AI and people around you. Learning by yourself is one of the skills being tested.</li>
+          <li><strong>AI will evaluate you.</strong> Many answers are checked by a program or judged by an AI model. <mark>Those decisions are final.</mark></li>
+          <li><strong>It is practical.</strong> Unclear problems, messy data, tight deadlines, limited support. Just like a real job.</li>
+          <li><strong>It is public.</strong> Anyone can read the content and try the assessments. Enrolled IITM students also get Discourse, project evaluation, the end term and a certificate.</li>
+        </ul>
+        <blockquote class="pull">"It's a hard course. Take it in your last IITM BS Diploma term. It's good for learning, maybe not for grades."<cite>tds.s-anand.net, May 2026</cite></blockquote>
+        <p>That line is not a joke. In the January 2025 term, 40% of the batch failed. Students still rate what they learnt highly. Go in knowing it will take more time than a normal 3-credit course.</p>
+      </div>
+    </section>
+
+    <!-- 02 ─────────────────────────────────────────── -->
+    <section class="chapter" id="different" aria-labelledby="different-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">02</span>
+        <span class="eyebrow">Chapter 02 <a class="chapter__link" href="#different" aria-label="Link to chapter 02">#</a></span>
+        <h2 id="different-h">How it differs from other courses</h2>
+      </header>
+      <div class="prose">
+        <p>If you have done MLF, MLT or BDM, forget most of what you expect. Nearly everything about TDS works differently.</p>
+        <div class="ledger-wrap">
+          <table class="ledger ledger--compare">
+            <thead><tr><th>Thing</th><th>Most IITM courses</th><th>TDS</th></tr></thead>
+            <tbody>
+              <tr><td>Where you submit</td><td class="other">The SEEK portal</td><td class="tds">Its own TDS exam portal. <strong>SEEK is not used for submissions.</strong></td></tr>
+              <tr><td>Using ChatGPT or Claude</td><td class="other">Counts as plagiarism unless allowed</td><td class="tds"><mark>Allowed and encouraged</mark>, everywhere except the in-person end term</td></tr>
+              <tr><td>Copying from friends</td><td class="other">Honour code violation</td><td class="tds">Allowed. Share code, work in groups. Understand what you copy.</td></tr>
+              <tr><td>Weekly work</td><td class="other">Assignments on a fixed weekly rhythm</td><td class="tds">9 GAs whose windows overlap. Best 7 count.</td></tr>
+              <tr><td>Quizzes</td><td class="other">Quiz 1 and Quiz 2 at exam centres</td><td class="tds">No quizzes at all</td></tr>
+              <tr><td>Online exam</td><td class="other">OPPE: proctored, needs the system test</td><td class="tds">ROE: 45 min, open internet, not proctored, no system test</td></tr>
+              <tr><td>Your questions</td><td class="other">Same for everyone</td><td class="tds">Generated from your email, so your numbers differ from your friend's</td></tr>
+              <tr><td>Who checks answers</td><td class="other">Fixed answer keys</td><td class="tds">Code that tests your work, or an AI judge. No appeal against the AI.</td></tr>
+              <tr><td>Projects</td><td class="other">Varies</td><td class="tds">Two take-home projects, 20% each</td></tr>
+              <tr><td>Time needed</td><td class="other">A normal 3-credit load</td><td class="tds">More. Plan extra time every week.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <span class="note">Machine Learning Practice (MLP) is listed as the co-requisite, so many people take the two together.</span>
+        <h3>When should you take it?</h3>
+        <p>The course team's answer is <strong>your last diploma term</strong>. By then you are comfortable with Python and have done enough courses to handle the load. If you have to take it earlier, take GA0 seriously (chapter 05) and keep your other courses light that term.</p>
+      </div>
+    </section>
+
+    <!-- 03 ─────────────────────────────────────────── -->
+    <section class="chapter" id="learn" aria-labelledby="learn-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">03</span>
+        <span class="eyebrow">Chapter 03 <a class="chapter__link" href="#learn" aria-label="Link to chapter 03">#</a></span>
+        <h2 id="learn-h">What you will learn</h2>
+      </header>
+      <div class="prose">
+        <p>The May 2026 term had a five-day bootcamp and then eight weekly modules. Don't worry about the tool names. Nobody knows these on day one. That is what the week is for.</p>
+        <ol class="rows">
+          <li><div class="rows__k">Bootcamp<small>5 days</small></div><div class="rows__v"><p>Set your laptop up properly: the terminal, VS Code, running Python projects, how websites talk to each other, your browser's developer tools, and Git.</p><p class="tools">terminal &middot; VS Code &middot; uv &middot; HTTP &middot; DevTools &middot; curl &middot; Git &middot; GitHub</p></div></li>
+          <li><div class="rows__k">Week 1<small>Development tools</small></div><div class="rows__v"><p>The everyday toolkit: editor, shell scripts, version control, a small database, data formats, and hosting a page for free.</p><p class="tools">VS Code &middot; uv &middot; Bash &middot; Git &amp; GitHub &middot; SQLite &middot; JSON/CSV &middot; GitHub Pages &middot; LaTeX</p></div></li>
+          <li><div class="rows__k">Week 2<small>Deployment</small></div><div class="rows__v"><p>Turn your code into something other people can use through a link, and run AI models on your own machine.</p><p class="tools">FastAPI &middot; CORS &middot; Google login &middot; Docker &middot; hosting platforms &middot; logging &middot; Cloudflare tunnels &middot; Ollama</p></div></li>
+          <li><div class="rows__k">Week 3<small>Working with LLMs</small></div><div class="rows__v"><p>Getting reliable output from AI models: good prompts, the right context, structured answers, and finding similar text using embeddings.</p><p class="tools">prompt engineering &middot; context engineering &middot; structured output &middot; embeddings &middot; LLM CLI tools &middot; AI coding assistants</p></div></li>
+          <li><div class="rows__k">Week 4<small>RAG</small></div><div class="rows__v"><p>Making AI answer from your own documents: splitting documents, searching them well, and checking whether the answers are any good.</p><p class="tools">vector databases &middot; chunking &middot; hybrid search &middot; reranking &middot; GraphRAG &middot; RAGAS</p></div></li>
+          <li><div class="rows__k">Week 5<small>AI agents</small></div><div class="rows__v"><p>AI that uses tools and takes actions, and how to keep it safe: limits, guardrails, sandboxes.</p><p class="tools">tool calling &middot; agent memory &middot; multi-agent systems &middot; MCP &middot; sandboxing</p></div></li>
+          <li><div class="rows__k">Week 6<small>Getting data</small></div><div class="rows__v"><p>Collecting data from websites, PDFs, images, audio and video, ethically, and finding things with smart search.</p><p class="tools">scraping &middot; hidden APIs &middot; Playwright &middot; DuckDB &middot; document parsing &middot; speech &amp; vision &middot; Google dorking &middot; OSINT</p></div></li>
+          <li><div class="rows__k">Week 7<small>CI/CD, security, cloud</small></div><div class="rows__v"><p>Automating releases, attacking and defending AI apps, and the basics of running things on cloud servers.</p><p class="tools">GitHub Actions &middot; Docker &middot; LLM security &middot; OWASP LLM Top 10 &middot; Cloudflare &middot; SSH &middot; serverless &middot; Terraform</p></div></li>
+          <li><div class="rows__k">Week 8<small>ML on the cloud</small></div><div class="rows__v"><p>Training, tracking, shrinking and publishing machine-learning models.</p><p class="tools">Cloud Storage &middot; BigQuery ML &middot; MLflow &middot; fine-tuning &middot; Hugging Face &middot; quantization &middot; model cards</p></div></li>
+        </ol>
+        <h3>The skills you really walk away with</h3>
+        <span class="note">This list is the real syllabus. The tools change every term. These don't.</span>
+        <ul class="redpen redpen--tick">
+          <li>Learning a tool you have never heard of, in an evening, with AI helping you.</li>
+          <li>Reading a long task description carefully and doing exactly what it asks.</li>
+          <li>Putting something on the internet that a stranger's program can open and test.</li>
+          <li>Staying calm when the checker says 0, and working out why.</li>
+          <li>Working with classmates instead of alone.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 04 ─────────────────────────────────────────── -->
+    <section class="chapter" id="pre-skills" aria-labelledby="pre-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">04</span>
+        <span class="eyebrow">Chapter 04 <a class="chapter__link" href="#pre-skills" aria-label="Link to chapter 04">#</a></span>
+        <h2 id="pre-h">Skills to have first</h2>
+      </header>
+      <div class="prose">
+        <p>The official list is short and serious: <strong>Python, JavaScript, HTML, APIs, Excel, ChatGPT, and data science basics</strong>. The course says you need a <em>good</em> understanding, not a passing one. Tick what you can honestly do today.</p>
+        <div class="sheet" id="readiness">
+          <div class="sheet__title"><h4>Am I ready?</h4><span class="eyebrow" id="readyCount">0 of 10</span></div>
+          <ul class="checklist">
+            <li><label><input type="checkbox" value="py"><span>I can write a small Python script that reads a CSV file and prints a summary.<span class="hint">Without copying every line from AI.</span></span></label></li>
+            <li><label><input type="checkbox" value="term"><span>I can open a terminal, move between folders and run a Python file.</span></label></li>
+            <li><label><input type="checkbox" value="json"><span>I know what JSON looks like and can pick a value out of it.</span></label></li>
+            <li><label><input type="checkbox" value="http"><span>I roughly know what happens when a browser requests a URL (GET, POST, status codes like 404).</span></label></li>
+            <li><label><input type="checkbox" value="html"><span>I can read simple HTML and a little JavaScript.</span></label></li>
+            <li><label><input type="checkbox" value="git"><span>I have a GitHub account and have pushed code to a repository at least once.</span></label></li>
+            <li><label><input type="checkbox" value="sql"><span>I can write a basic SQL query with GROUP BY.</span></label></li>
+            <li><label><input type="checkbox" value="excel"><span>I am comfortable in Excel or Google Sheets (filters, formulas, pivots).</span></label></li>
+            <li><label><input type="checkbox" value="ai"><span>When I get an error, I paste it into an AI chat and actually understand the reply.</span></label></li>
+            <li><label><input type="checkbox" value="time"><span>I can give this course a few focused hours every week, more near deadlines.</span></label></li>
+          </ul>
+          <div class="meter" aria-hidden="true"><i id="readyBar"></i></div>
+          <p class="verdict" id="readyVerdict" aria-live="polite">Tick the boxes above.</p>
+        </div>
+        <h3>Your setup</h3>
+        <ul>
+          <li><strong>A laptop or desktop.</strong> A phone is not enough for this course.</li>
+          <li><strong>Permission to install software.</strong> A locked office laptop will cause pain. The course publishes a list of software and websites you need access to.</li>
+          <li><strong>Windows is fine.</strong> The bootcamp sets up a Linux terminal inside Windows (WSL), which is what most instructions assume.</li>
+          <li><strong>Steady internet</strong>, plus a phone hotspot as backup.</li>
+          <li><strong>Cloud accounts early.</strong> Some tasks need accounts such as Google Cloud, which can ask for card verification before you can use them. Sort this out in week 1, not on deadline day.</li>
+        </ul>
+        <span class="note">Weak on JavaScript or SQL? You can still manage. Weak on Python AND the terminal? Fix those first, then come back.</span>
+      </div>
+    </section>
+
+    <!-- 05 ─────────────────────────────────────────── -->
+    <section class="chapter" id="ga0" aria-labelledby="ga0-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">05</span>
+        <span class="eyebrow">Chapter 05 <a class="chapter__link" href="#ga0" aria-label="Link to chapter 05">#</a></span>
+        <h2 id="ga0-h">GA0 and eligibility</h2>
+      </header>
+      <div class="prose">
+        <p><strong>GA0 is the entrance exam.</strong> It checks whether you have the pre-requisites. It opens before the term starts (13 May in the May 2026 term) and stayed open until 21 June, alongside a five-day bootcamp.</p>
+        <p>The rule is simple: <mark>if you score below 40% in GA0, the course team says don't register for TDS this term</mark>, unless you really have no choice. Do it in a later term, when it won't crush you.</p>
+        <span class="note">Take GA0 <b>before</b> you finalise course registration. It is public, so you can attempt it any time before its deadline.</span>
+        <h3>What's in it</h3>
+        <p>In May 2026, GA0 had 25 short tasks covering the basics you will use all term. A few of them, to give you the flavour:</p>
+        <ul>
+          <li>Move and rename files, and replace text across many files</li>
+          <li>Use Git, GitHub and a GitHub Action</li>
+          <li>Use your browser's developer tools to find something on a page</li>
+          <li>Write SQL, sort and filter a JSON file, calculate a variance</li>
+          <li>Run a small web server, and call an AI model to classify sentiment</li>
+          <li>"Get an LLM to say Yes", which is a prompt-writing puzzle</li>
+        </ul>
+        <h3>GA0 counts. Twice.</h3>
+        <ol class="steps">
+          <li><strong>It is one of your 9 GAs.</strong> Your GA score is the average of your best 7 out of GA0 to GA8, so a good GA0 helps your final marks.</li>
+          <li><strong>It is part of end-term eligibility.</strong> To sit the end term, the average of your <mark>best 4 of the first 5 GAs must be at least 40</mark>. In May 2026 the first five were GA0, GA1, GA2, GA3 and GA4.</li>
+        </ol>
+        <div class="sheet" id="elig">
+          <div class="sheet__title"><h4>Eligibility check</h4><span class="eyebrow">best 4 of first 5</span></div>
+          <p style="font-size:.92rem;color:var(--ink-2)">Type your scores out of 100. Leave a box empty if that GA isn't out yet.</p>
+          <div class="calc__grid">
+            <label class="field"><span>GA0</span><input inputmode="decimal" data-elig="0" placeholder="&ndash;" aria-label="GA0 score"></label>
+            <label class="field"><span>GA1</span><input inputmode="decimal" data-elig="1" placeholder="&ndash;" aria-label="GA1 score"></label>
+            <label class="field"><span>GA2</span><input inputmode="decimal" data-elig="2" placeholder="&ndash;" aria-label="GA2 score"></label>
+            <label class="field"><span>GA3</span><input inputmode="decimal" data-elig="3" placeholder="&ndash;" aria-label="GA3 score"></label>
+            <label class="field"><span>GA4</span><input inputmode="decimal" data-elig="4" placeholder="&ndash;" aria-label="GA4 score"></label>
+          </div>
+          <div aria-live="polite" id="eligOut"><span class="stamp stamp--wait">Waiting for scores</span></div>
+        </div>
+        <h3>GA0 doubts</h3>
+        <div class="faq faq--inline">
+          <details><summary>Which email should I log in with?</summary><div class="ans"><p>Your IITM student email. Your questions are generated from your email and your marks are saved against it. Logging in with a personal Gmail means your work goes to the wrong place.</p></div></details>
+          <details><summary>How many times can I try?</summary><div class="ans"><p>You can press <strong>Check</strong> as often as you like before the deadline. What counts is your <strong>last saved</strong> submission, so press <strong>Save</strong> after every improvement.</p></div></details>
+          <details><summary>I got 35%. Should I really drop the course?</summary><div class="ans"><p>The official advice is yes: take it in a later term. Be honest about why you scored low. If you ran out of time but understood the tasks once you sat down with them, that is different from not understanding what the questions were asking. If it's the second one, the rest of the term will feel the same, only harder.</p></div></details>
+          <details><summary>GA0 looks too hard. Is the whole course like this?</summary><div class="ans"><p>GA0 covers the basics. The weekly GAs go further (deploying apps, AI agents, cloud). The difference is that you'll have a week of practice before each one. If GA0 feels impossible even with AI helping you, that tells you something.</p></div></details>
+          <details><summary>I joined late. Will GA0's deadline be extended?</summary><div class="ans"><p>Don't plan around it. The May 2026 grading document said plainly that assignment deadlines would not be changed.</p></div></details>
+          <details><summary>What is the bootcamp and do I have to attend?</summary><div class="ans"><p>It is a five-day bridge course: laptop setup, terminal basics, VS Code and Python projects, HTTP and browser tools, and Git. Each day has a checklist on the course site. If you already know these, skim the checklists. If not, do all five days. The whole term rests on them.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 ─────────────────────────────────────────── -->
+    <section class="chapter" id="ga" aria-labelledby="ga-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">06</span>
+        <span class="eyebrow">Chapter 06 <a class="chapter__link" href="#ga" aria-label="Link to chapter 06">#</a></span>
+        <h2 id="ga-h">How to do a GA</h2>
+      </header>
+      <div class="prose">
+        <p>A GA (graded assignment) is one web page with a list of questions, each worth some marks. Every question has a <strong>Check</strong> button that tells you your score. At the bottom there is a <strong>Save</strong> button.</p>
+        <blockquote class="pull">Check only tells you your score. <mark>Save</mark> is what records it.<cite>Your last saved submission is the one that gets evaluated.</cite></blockquote>
+        <h3>The three kinds of questions</h3>
+        <div class="split">
+          <div><h4>1. Work it out</h4><p>Download a file or read some data, work something out, paste the answer: a number, a short code, a piece of JSON. If you follow the rule exactly, the marks are yours.</p></div>
+          <div><h4>2. Build it and put it online</h4><p>Make a small app, put it on the internet, and paste its link. The checker visits your link and tests it. Most of the deadline-night panic comes from these.</p></div>
+          <div><h4>3. Write it well</h4><p>A prompt, a short note, an explanation. An AI model reads it and gives marks. Be clear and follow the requested structure.</p></div>
+          <div><h4>4. Something unusual</h4><p>Find where a photo was taken, record a terminal session, collaborate with classmates. Read these twice. They are often simpler than they look.</p></div>
+        </div>
+        <h3>A routine that works</h3>
+        <ol class="steps">
+          <li><strong>Open the GA the day it is released.</strong> Read every question before solving any. Note down the marks.</li>
+          <li><strong>Quick wins first.</strong> High marks, low effort. Leave the monsters for later.</li>
+          <li><strong>Open every hidden section.</strong> Questions often have collapsed blocks with the exact rules and formats. Missing one is the most common way to lose marks.</li>
+          <li><strong>Use AI to understand, not only to answer.</strong> Each question has an Ask AI button. Ask it to explain the task in simple words, then solve it step by step.</li>
+          <li><strong>Copy the method, not the answer.</strong> Your data comes from your email. Your friend's final answer won't match yours, but their approach will work.</li>
+          <li><strong>Check, fix, Check again, then Save.</strong> Save every time your score goes up.</li>
+          <li><strong>Test "put it online" answers like a stranger.</strong> Open your link in an incognito window before pressing Check. Free hosting sleeps when idle, so open it first to wake it up.</li>
+          <li><strong>Stuck for 30 minutes?</strong> Stop. Ask on Discourse, read the question's public GitHub discussion, or ask a friend how they approached it.</li>
+        </ol>
+        <span class="note">Keep whatever you deployed running until results come out. Some checks happen <b>after</b> the deadline.</span>
+        <h3>Mistakes that cost people marks</h3>
+        <ul class="redpen">
+          <li>Pressing Check, seeing full marks, closing the tab, and never pressing Save.</li>
+          <li>Skipping GA0 to GA4 because "best 7 of 9". Those decide your end-term eligibility.</li>
+          <li>Pasting a URL that works when you're logged in but not for a stranger.</li>
+          <li>"Improving" a value the question wrote down exactly. If the question gives a specific word or format, use it as written.</li>
+          <li>Starting two days before the deadline, when three other things are due that week.</li>
+        </ul>
+        <h3>The nine GAs of May 2026</h3>
+        <p>Example question titles are real, to show what each week feels like. Titles change every term, but the themes are a good preview.</p>
+        <div class="ledger-wrap">
+          <table class="ledger">
+            <thead><tr><th>GA</th><th>Theme</th><th>Example questions</th><th>Open</th></tr></thead>
+            <tbody>
+              <tr><td>GA0</td><td>Entrance: the basics</td><td>Move and rename files &middot; SQL: average salary by department &middot; Get an LLM to say Yes</td><td class="mono">13 May &ndash; 21 Jun</td></tr>
+              <tr><td>GA1</td><td>Development tools</td><td>Git time travel &middot; Host your portfolio on GitHub Pages &middot; Debug and improve a failing prompt</td><td class="mono">17 &ndash; 28 Jun</td></tr>
+              <tr><td>GA2</td><td>Deployment</td><td>Deploy a CORS-aware metrics API &middot; Expose a local LLM through a tunnel &middot; Multi-container app with Compose</td><td class="mono">28 Jun &ndash; 8 Jul</td></tr>
+              <tr><td>GA3</td><td>LLM engineering</td><td>Invoice data extraction API &middot; Semantic search ranking &middot; Spin up an LLM command-line tool</td><td class="mono">5 &ndash; 22 Jul</td></tr>
+              <tr><td>GA4</td><td>RAG</td><td>Chunking and hybrid retrieval &middot; A RAG evaluation harness &middot; Reciprocal rank fusion by hand</td><td class="mono">8 &ndash; 22 Jul</td></tr>
+              <tr><td>GA5</td><td>AI agents</td><td>Build a live MCP server &middot; Guardrail red-team round-trip &middot; Build a safe AI mailroom agent</td><td class="mono">17 Jul &ndash; 10 Aug</td></tr>
+              <tr><td>GA6</td><td>Getting data</td><td>Scrape Books to Scrape &middot; Crawl a site respecting robots.txt &middot; Decode a hidden signal in audio</td><td class="mono">27 Jul &ndash; 9 Aug</td></tr>
+              <tr><td>GA7</td><td>CI/CD, security, cloud</td><td>Audit a GitHub Actions workflow &middot; An LLM action firewall &middot; Street View: where is this?</td><td class="mono">9 &ndash; 21 Aug</td></tr>
+              <tr><td>GA8</td><td>ML on the cloud</td><td>A leakage-safe BigQuery ML experiment &middot; Promote the right MLflow model &middot; Publish a model card</td><td class="mono">18 &ndash; 28 Aug</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Method guides from last term are in <a href="#resources">chapter 11</a>. They explain the approach, never the answers.</p>
+      </div>
+    </section>
+
+    <!-- 07 ─────────────────────────────────────────── -->
+    <section class="chapter" id="roe" aria-labelledby="roe-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">07</span>
+        <span class="eyebrow">Chapter 07 <a class="chapter__link" href="#roe" aria-label="Link to chapter 07">#</a></span>
+        <h2 id="roe-h">The ROE, and staying safe</h2>
+      </header>
+      <div class="prose">
+        <p>The <strong>Remote Online Exam</strong> is worth <mark>20%</mark>. It lasts <strong>45 minutes</strong>, you take it from home, the internet is open, and it is <strong>not proctored</strong>. No system compatibility test is needed. In May 2026 it was on Sunday 2 August, 1:00 to 1:45 PM.</p>
+        <blockquote class="pull">"The ROE is intentionally impossible."<cite>tds.s-anand.net</cite></blockquote>
+        <p>Nobody is expected to finish it. It tests how you <strong>choose</strong> under pressure: what to attempt, what to skip, and how fast you can get AI to do the heavy lifting.</p>
+        <h3>What it looked like</h3>
+        <p>The January 2026 ROE had 15 questions. Last term's (May 2026) had 12, and they were all over the place:</p>
+        <ul>
+          <li><strong>Find it:</strong> work out exactly where a Street View photo was taken.</li>
+          <li><strong>Untangle data:</strong> a ledger full of look-alike characters, a route through an incident map, a simulation of how a web cache behaves.</li>
+          <li><strong>Write and judge:</strong> a prompt that detects AI-written text, a short memo on where AI could help a business, insights from government telecom survey data.</li>
+          <li><strong>Human ones:</strong> donate a few marks to classmates, record a short audio clip.</li>
+        </ul>
+        <span class="note">Next term's questions will be different. The strategy below won't be.</span>
+        <h3>Strategy for the 45 minutes</h3>
+        <ol class="steps">
+          <li><strong>First 3 minutes: scan everything.</strong> Write the marks next to each question. Don't start solving yet.</li>
+          <li><strong>Quick wins first.</strong> High marks, low effort. With AI, you won't know what's easy until you try, so try each one briefly.</li>
+          <li><strong>Use AI first.</strong> Paste the question in. Spend your own brain only on what AI gets wrong.</li>
+          <li><strong>The 2-minute rule.</strong> Stuck and going nowhere? Move on and come back later.</li>
+          <li><strong>Submit the first reasonable answer, then Save.</strong> In May 2026 you could re-answer and there was no negative marking. An unsaved right answer is worth zero.</li>
+          <li><strong>Last 10 minutes: start nothing new.</strong> Save everything, including your guesses.</li>
+          <li><strong>Make friends before the exam.</strong> Some ROE questions reward working with classmates. The course faculty's own advice after the Jan 2026 ROE: work together, it helps now and later.</li>
+        </ol>
+
+        <h3>Staying safe: the exam's rules</h3>
+        <ul class="redpen redpen--tick">
+          <li><strong>Log in with your IITM email.</strong> Questions and marks are tied to it.</li>
+          <li><strong>Internet, AI, notes and friends are allowed</strong> in the ROE. The course explicitly allows sharing code in exams, except the in-person end term.</li>
+          <li><strong>Your questions are personalised.</strong> A friend's final answer won't work for you. Share methods, not values.</li>
+          <li><strong>Save regularly.</strong> The last saved submission is what counts.</li>
+        </ul>
+
+        <h3>Staying safe: your own setup</h3>
+        <p>More people lose ROE marks to a dead laptop, a logged-out account or a leaked key than to hard questions. Do this the day before.</p>
+        <div class="split">
+          <div>
+            <h4>Machine and internet</h4>
+            <ul>
+              <li>Laptop charged, charger plugged in.</li>
+              <li>Phone hotspot ready as backup internet.</li>
+              <li>Chrome or Edge. Turn off ad and cookie blockers for the exam site, since login uses third-party cookies.</li>
+              <li>Log in to the exam portal once the day before to be sure it works.</li>
+              <li>Empty your Downloads folder so exam files are easy to find.</li>
+              <li>Mute notifications. Close everything you don't need.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Accounts and keys</h4>
+            <ul>
+              <li>Be logged in to two AI tools, in case one hits a limit.</li>
+              <li>If you use API keys or tokens, <strong>check they haven't expired</strong>. Some student tokens only last about a week.</li>
+              <li>Never paste a key into a WhatsApp group, a shared doc or a public GitHub repo. If you leak one, cancel it and make a new one right away.</li>
+              <li>Don't run scripts from group chats that you haven't read. A script can quietly send your keys or login cookies to someone else.</li>
+              <li>Install Python packages and tools the day before, not during the exam.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 ─────────────────────────────────────────── -->
+    <section class="chapter" id="projects" aria-labelledby="projects-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">08</span>
+        <span class="eyebrow">Chapter 08 <a class="chapter__link" href="#projects" aria-label="Link to chapter 08">#</a></span>
+        <h2 id="projects-h">Projects</h2>
+      </header>
+      <div class="prose">
+        <p>Two take-home projects, <mark>20% each</mark>, open internet. They take longer than any GA and they overlap with GAs and the ROE, so start early. The format changes every term. Here is what May 2026 looked like.</p>
+
+        <div class="sheet">
+          <div class="sheet__title"><h4>Project 1</h4><span class="eyebrow">5 &ndash; 30 Jul 2026</span></div>
+          <p>Five parts, mostly about using AI and the cloud to get real work done:</p>
+          <ol class="rows">
+            <li><div class="rows__k">12.5<small>marks</small></div><div class="rows__v"><p><strong>Requirements interview.</strong> Record a short interview and share it, with your questions file, in a Google Drive folder.</p></div></li>
+            <li><div class="rows__k">12.5<small>marks</small></div><div class="rows__v"><p><strong>Differentiating model intelligence.</strong> Write one prompt that a weaker AI model gets wrong and a stronger one gets right.</p></div></li>
+            <li><div class="rows__k">12.5<small>marks</small></div><div class="rows__v"><p><strong>AI agent: cloud bucket setup.</strong> Get an AI agent to create a storage bucket on Google Cloud, and keep the agent's log.</p></div></li>
+            <li><div class="rows__k">12.5<small>marks</small></div><div class="rows__v"><p><strong>AI agent: dataset upload.</strong> Upload a given file to that storage, unchanged, and prove it.</p></div></li>
+            <li><div class="rows__k">37.5<small>marks</small></div><div class="rows__v"><p><strong>Data analyst Telegram bot.</strong> A bot that answers questions about data using an AI model. The big one.</p></div></li>
+          </ol>
+        </div>
+
+        <div class="sheet">
+          <div class="sheet__title"><h4>Project 2</h4><span class="eyebrow">17 Aug &ndash; 5 Sep 2026</span></div>
+          <p>Eight business case studies, like a TV company's month-end numbers, a solar inverter impact claim, a customs mismatch, a spare-parts search. You play an analyst: read the data, emails and procedures, then write a short diagnostic note with:</p>
+          <ul>
+            <li>a direct judgment in the first lines,</li>
+            <li>an evidence table (claim, source, confidence),</li>
+            <li>the explanations you ruled out, and why,</li>
+            <li>what you still don't know,</li>
+            <li>a safe, reversible next step.</li>
+          </ul>
+          <p>Each note had a character limit, and the key line in the question was: <mark>"Evidence is scored before conclusion."</mark> A well-argued "insufficient evidence" could earn full marks.</p>
+        </div>
+
+        <h3>What trips people up</h3>
+        <ul class="redpen">
+          <li><strong>Panicking over a "half score".</strong> In P1, some parts showed only part of the marks on Check because the rest is graded after the deadline. That half was often the full visible score.</li>
+          <li><strong>Deleting things after submitting.</strong> Grading happens after the deadline. Keep buckets, bots, hosting and API keys alive until results.</li>
+          <li><strong>Testing only while logged in.</strong> The grader is a stranger. Test your links in incognito.</li>
+          <li><strong>Treating an email in the case as proof.</strong> In P2, test every claim against the data.</li>
+          <li><strong>Leaving it to the last week.</strong> P1 overlapped with five GAs. P2 overlapped with GA7 and GA8.</li>
+        </ul>
+        <span class="note">Past terms had live evaluations on a fixed day and time. Read your term's project page the day it opens.</span>
+      </div>
+    </section>
+
+    <!-- 09 ─────────────────────────────────────────── -->
+    <section class="chapter" id="et" aria-labelledby="et-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">09</span>
+        <span class="eyebrow">Chapter 09 <a class="chapter__link" href="#et" aria-label="Link to chapter 09">#</a></span>
+        <h2 id="et-h">End term and your marks</h2>
+      </header>
+      <div class="prose">
+        <p>The end term (ET) is the one part of TDS that looks like a normal exam.</p>
+        <ul>
+          <li><strong>In person</strong>, at an exam centre. May 2026: Sunday 13 September.</li>
+          <li><strong>No internet, no AI, no friends.</strong> The only assessment where copying isn't allowed.</li>
+          <li><strong>Worth 20%</strong>, and <strong>mandatory</strong>. You only get a course grade if you attend it.</li>
+          <li><strong>You must be eligible:</strong> best 4 of the first 5 GAs averaging at least 40 (see chapter 05).</li>
+        </ul>
+        <span class="note">Miss only the end term, with everything else done, and you get an "I" (incomplete). You can then write just the ET in a later term.</span>
+        <p>An older version of the course page (May 2025) described it as <em>"in-person and closed book. It tests your memory. It's easy."</em> The course has changed a lot since then, so treat that as a hint, not a promise. Your safest preparation: go back over each week's topics and your own GA work, and make sure you remember what each tool is for.</p>
+
+        <h3>How your final score is calculated</h3>
+        <blockquote class="pull">T = 0.2 &times; GA + 0.2 &times; ROE + 0.2 &times; P1 + 0.2 &times; P2 + 0.2 &times; ET<cite>May 2026 grading document. GA = average of your best 7 of 9 GAs.</cite></blockquote>
+
+        <div class="sheet" id="calc">
+          <div class="sheet__title"><h4>Marks calculator</h4><span class="eyebrow">scores out of 100</span></div>
+          <p class="calc__sub">Graded assignments</p>
+          <div class="calc__grid">
+            <label class="field"><span>GA0</span><input inputmode="decimal" data-ga="0" placeholder="&ndash;" aria-label="GA0 score"></label>
+            <label class="field"><span>GA1</span><input inputmode="decimal" data-ga="1" placeholder="&ndash;" aria-label="GA1 score"></label>
+            <label class="field"><span>GA2</span><input inputmode="decimal" data-ga="2" placeholder="&ndash;" aria-label="GA2 score"></label>
+            <label class="field"><span>GA3</span><input inputmode="decimal" data-ga="3" placeholder="&ndash;" aria-label="GA3 score"></label>
+            <label class="field"><span>GA4</span><input inputmode="decimal" data-ga="4" placeholder="&ndash;" aria-label="GA4 score"></label>
+            <label class="field"><span>GA5</span><input inputmode="decimal" data-ga="5" placeholder="&ndash;" aria-label="GA5 score"></label>
+            <label class="field"><span>GA6</span><input inputmode="decimal" data-ga="6" placeholder="&ndash;" aria-label="GA6 score"></label>
+            <label class="field"><span>GA7</span><input inputmode="decimal" data-ga="7" placeholder="&ndash;" aria-label="GA7 score"></label>
+            <label class="field"><span>GA8</span><input inputmode="decimal" data-ga="8" placeholder="&ndash;" aria-label="GA8 score"></label>
+          </div>
+          <p class="calc__sub">Everything else</p>
+          <div class="calc__grid">
+            <label class="field"><span>ROE</span><input inputmode="decimal" data-part="roe" placeholder="&ndash;" aria-label="ROE score"></label>
+            <label class="field"><span>P1</span><input inputmode="decimal" data-part="p1" placeholder="&ndash;" aria-label="Project 1 score"></label>
+            <label class="field"><span>P2</span><input inputmode="decimal" data-part="p2" placeholder="&ndash;" aria-label="Project 2 score"></label>
+            <label class="field"><span>End term</span><input inputmode="decimal" data-part="et" placeholder="&ndash;" aria-label="End term score"></label>
+          </div>
+          <div class="btnrow">
+            <button class="btn btn--ghost" type="button" id="calcClear">Clear</button>
+          </div>
+          <dl class="calc__out" aria-live="polite">
+            <div class="out"><dt>GA average (best 7)</dt><dd id="oGa">&ndash;<small>Enter GA scores</small></dd></div>
+            <div class="out"><dt>Total T</dt><dd id="oT">&ndash;<small>Empty boxes count as 0</small></dd></div>
+            <div class="out"><dt>ET eligibility</dt><dd id="oElig"><span class="stamp stamp--wait">Waiting</span></dd></div>
+          </dl>
+          <p id="oNeed" class="verdict" aria-live="polite"></p>
+        </div>
+        <p style="font-size:.92rem;color:var(--ink-2)">Grade bands in the BS programme: S at 90 and above, A 80, B 70, C 60, D 50, E 40. Below 40 is U, which means repeating the course. Confirm the cut-offs in the Student Handbook for your term. Nothing you type here is sent anywhere.</p>
+      </div>
+    </section>
+
+    <!-- 10 ─────────────────────────────────────────── -->
+    <section class="chapter" id="changed" aria-labelledby="changed-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">10</span>
+        <span class="eyebrow">Chapter 10 <a class="chapter__link" href="#changed" aria-label="Link to chapter 10">#</a></span>
+        <h2 id="changed-h">What changed in May 2026</h2>
+      </header>
+      <div class="prose">
+        <p>If a senior from 2025 is advising you, some of what they remember is out of date. Here is what changed, compared with the course pages of earlier terms.</p>
+        <div class="ledger-wrap">
+          <table class="ledger ledger--compare">
+            <thead><tr><th>What</th><th>Before</th><th>May 2026</th></tr></thead>
+            <tbody>
+              <tr><td>Readiness check</td><td class="other">GA1 doubled as the pre-requisite check (Sep 2025)</td><td class="tds">A separate <strong>GA0 entrance exam</strong> and a <strong>5-day bootcamp</strong></td></tr>
+              <tr><td>GAs that count</td><td class="other">Best 4 of 7 (May 2025), best 5 of 8 (Sep 2025)</td><td class="tds"><mark>Best 7 of 9</mark></td></tr>
+              <tr><td>Weights</td><td class="other">May 2025: GAs 15%, end term 25%</td><td class="tds">All five parts at 20%</td></tr>
+              <tr><td>Syllabus</td><td class="other">Sep 2025: dev tools, deployment, AI coding, LLMs, data sourcing, preparation, analysis, visualisation</td><td class="tds">Rebuilt around AI: RAG, agents, LLM security, CI/CD and cloud, ML on the cloud. Data preparation, analysis and visualisation are no longer separate modules.</td></tr>
+              <tr><td>How you learn</td><td class="other">Written lessons per topic</td><td class="tds">Challenge-first. The content is "only a topic reference", and every question has an Ask AI button.</td></tr>
+              <tr><td>Project 2</td><td class="other">Sep 2025: live evaluation in a fixed one-hour slot</td><td class="tds">Eight written analyst case studies, judged on evidence</td></tr>
+              <tr><td>Virtual TA</td><td class="other">A custom GPT answered doubts</td><td class="tds">Retired. Ask AI yourself, then TAs.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <span class="note">The pattern: every term leans further into AI. Expect the next term to change again, so read the course page on day one.</span>
+      </div>
+    </section>
+
+    <!-- 11 ─────────────────────────────────────────── -->
+    <section class="chapter" id="resources" aria-labelledby="resources-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">11</span>
+        <span class="eyebrow">Chapter 11 <a class="chapter__link" href="#resources" aria-label="Link to chapter 11">#</a></span>
+        <h2 id="resources-h">Resources and links</h2>
+      </header>
+      <div class="prose">
+        <h3 style="margin-top:0">Official</h3>
+        <ul class="links">
+          <li><a href="https://tds.s-anand.net/"><b>Course site</b><em>Schedule, content, every GA, project and ROE link. Bookmark it.</em><span class="url">tds.s-anand.net</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://github.com/sanand0/tools-in-data-science-public/discussions"><b>Question discussions on GitHub</b><em>A public thread for almost every question. Read these when stuck.</em><span class="url">github.com/sanand0/tools-in-data-science-public/discussions</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://docs.google.com/document/d/e/2PACX-1vT5PBOz4OH663W0IJPVGVjG_nfmYZGfFI7W1j-6wTLcex13O_7BZmf6a96Q6liO0W-mLZB5hOGZeNNl/pub"><b>Grading document, May 2026</b><span class="tag">IITM</span><em>The official rules for weights and eligibility. Look for "Tools in Data Science".</em><span class="url">docs.google.com</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://discourse.onlinedegree.iitm.ac.in/c/courses/tds-kb/34"><b>TDS on Discourse</b><span class="tag">IITM login</span><em>Announcements, doubts, and answers from TAs.</em><span class="url">discourse.onlinedegree.iitm.ac.in</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://tds.s-anand.net/2026-02/docs/bridge-course/bridge-course-syllabus/"><b>Bootcamp checklists</b><em>Day-by-day list of what you should be able to do. Great for chapter 04.</em><span class="url">tds.s-anand.net/&hellip;/bridge-course-syllabus</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://www.youtube.com/@se-lr5ff"><b>Live session recordings</b><em>The course YouTube channel.</em><span class="url">youtube.com/@se-lr5ff</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://tds.s-anand.net/marks-dashboard/"><b>Marks dashboard</b><em>Your component scores and the official formula. GA and ROE scores appear one to two days after the deadline.</em><span class="url">tds.s-anand.net/marks-dashboard</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://groups.google.com/g/tds-iitm"><b>Public announcement group</b><em>For anyone auditing the course without an IITM login.</em><span class="url">groups.google.com/g/tds-iitm</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+
+        <h3>From the course faculty's blog</h3>
+        <ul class="links">
+          <li><a href="https://www.s-anand.net/blog/tds-jan-2026-roe/"><b>What happened in the Jan 2026 ROE</b><em>Which questions students got right, how few used AI, and four lessons. Read before your ROE.</em><span class="url">s-anand.net/blog/tds-jan-2026-roe</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://www.s-anand.net/blog/tools-in-data-science-jan-2026/"><b>Why the course is built around questions now</b><em>The thinking behind "AI will teach you".</em><span class="url">s-anand.net/blog/tools-in-data-science-jan-2026</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+
+        <h3>Method guides from last term</h3>
+        <p>Written by a student during the May 2026 term. <strong>They explain the approach and the traps, not the answers.</strong> Questions change every term, but the way of thinking carries over. Some are in Hinglish.</p>
+        <ul class="links">
+          <li><a href="https://github.com/angadseth/tds-ga4-guide"><b>GA4 guide: RAG week</b><span class="tag">May 2026</span><em>How to approach each retrieval question, one file per question.</em><span class="url">github.com/angadseth/tds-ga4-guide</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://github.com/angadseth/tds-ga5-guide"><b>GA5 guide: AI agents week</b><span class="tag">May 2026</span><em>Includes the general debugging tips that apply to every "put it online" question.</em><span class="url">github.com/angadseth/tds-ga5-guide</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://angadseth.github.io/tds-ga7-handbook/"><b>GA7 handbook: CI/CD, security, cloud</b><span class="tag">May 2026</span><em>The order rules must be applied in, and the traps hidden in the checks.</em><span class="url">angadseth.github.io/tds-ga7-handbook</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://github.com/angadseth/tds-p1-q5-guide"><b>Project 1 guide</b><span class="tag">May 2026</span><em>All five parts, with the five rules that apply to everything.</em><span class="url">github.com/angadseth/tds-p1-q5-guide</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://angadseth.github.io/tds-p2-guide/"><b>Project 2 guide</b><span class="tag">May 2026</span><em>How to work each of the eight case studies.</em><span class="url">angadseth.github.io/tds-p2-guide</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+
+        <h3>Older terms</h3>
+        <ul class="links">
+          <li><a href="https://tds.s-anand.net/2025-09/"><b>Sep 2025 course content</b><span class="url">tds.s-anand.net/2025-09</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="https://tds.s-anand.net/2025-05/"><b>May 2025 course content</b><span class="url">tds.s-anand.net/2025-05</span><span class="arr" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 12 ─────────────────────────────────────────── -->
+    <section class="chapter" id="doubts" aria-labelledby="doubts-h">
+      <header class="chapter__head">
+        <span class="chapter__no" aria-hidden="true">12</span>
+        <span class="eyebrow">Chapter 12 <a class="chapter__link" href="#doubts" aria-label="Link to chapter 12">#</a></span>
+        <h2 id="doubts-h">Doubts, answered</h2>
+      </header>
+      <div class="prose">
+        <p>The questions every new batch asks in the first two weeks.</p>
+        <div class="faqtools">
+          <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg><input id="faqSearch" type="search" placeholder="Search doubts: save, email, deadline&hellip;" aria-label="Search doubts"></label>
+          <div class="chips" role="group" aria-label="Filter doubts">
+            <button class="chip" type="button" data-cat="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-cat="rules" aria-pressed="false">Rules</button>
+            <button class="chip" type="button" data-cat="ga" aria-pressed="false">GAs</button>
+            <button class="chip" type="button" data-cat="exam" aria-pressed="false">Exams</button>
+            <button class="chip" type="button" data-cat="help" aria-pressed="false">Getting help</button>
+          </div>
+        </div>
+        <p class="faqcount" id="faqCount" aria-live="polite"></p>
+        <div class="faq" id="faq">
+          <details data-cat="rules"><summary>Can I really use ChatGPT, Claude or Gemini?</summary><div class="ans"><p>Yes. The grading document says you may use LLMs and may collaborate on assignments. The course asks you to give credit to the AI and people who helped. The only exception is the in-person end term.</p></div></details>
+          <details data-cat="rules"><summary>Is copying from friends allowed? Isn't that cheating?</summary><div class="ans"><p>In TDS it's allowed, even encouraged: "Share code. Even in projects, assignments, and exams (except the final in-person end-term exam)." The reason is that real work is done in teams. In practice your questions are generated from your email, so copying the final answer doesn't work anyway. Copy the method and understand it.</p></div></details>
+          <details data-cat="rules"><summary>Where do I submit? I can't find TDS assignments on SEEK.</summary><div class="ans"><p>That's expected. TDS uses its own exam portal. All GA, project and ROE links are on <a href="https://tds.s-anand.net/">tds.s-anand.net</a>. SEEK is not used for TDS submissions.</p></div></details>
+          <details data-cat="ga"><summary>I pressed Check and got full marks. Am I done?</summary><div class="ans"><p>Not until you press <strong>Save</strong>. Check only evaluates. Your last saved submission is what counts.</p></div></details>
+          <details data-cat="ga"><summary>Can I skip some GAs?</summary><div class="ans"><p>Only the best 7 of 9 count, so two can go badly. But GA0 to GA4 decide end-term eligibility, so don't skip those. If you're going to skip, skip a late one.</p></div></details>
+          <details data-cat="ga"><summary>My friend and I did the same thing but got different answers. Who is wrong?</summary><div class="ans"><p>Probably nobody. Questions are personalised from your email, so your data and your expected answer are different from theirs.</p></div></details>
+          <details data-cat="ga"><summary>The checker gave me 0 but my app works. Why?</summary><div class="ans"><p>Usually the problem isn't your logic, it's the setup around it: the wrong link, a server that fell asleep, something that only works while you're logged in, or an output format slightly different from what the question wrote. Open your link in incognito, re-read every hidden section of the question, and match the exact format.</p></div></details>
+          <details data-cat="ga"><summary>The AI grader marked my answer unfairly. Can I appeal?</summary><div class="ans"><p>No. "LLM evaluations are final. No appeal." The skill being tested is writing answers that hold up no matter how the AI reads them: clear structure, the exact sections requested, no vague sentences.</p></div></details>
+          <details data-cat="ga"><summary>Will deadlines be extended?</summary><div class="ans"><p>Plan as if they won't. Extensions have happened in past terms, but the May 2026 grading document said assignment deadlines would not be changed.</p></div></details>
+          <details data-cat="ga"><summary>Do I have to pay for AI tools or hosting?</summary><div class="ans"><p>Most tasks can be done with free tiers. Some cloud tasks need an account that asks for billing or card verification, such as Google Cloud Storage in Project 1. Set these up early and watch for any charges.</p></div></details>
+          <details data-cat="ga"><summary>When will my scores show up?</summary><div class="ans"><p>According to the course's marks dashboard, GA and ROE scores are updated one to two days after the deadline. Project scores can take a week or two, because they take longer to evaluate.</p></div></details>
+          <details data-cat="exam"><summary>Is the ROE really impossible?</summary><div class="ans"><p>It's designed so that nobody finishes. That's fine. Scan everything, take the quick wins, use AI first, and save as you go. See chapter 07.</p></div></details>
+          <details data-cat="exam"><summary>Is the ROE proctored? Do I need the system compatibility test?</summary><div class="ans"><p>No and no. The ROE is a non-proctored, open-internet exam, and TDS doesn't need the OPPE system test.</p></div></details>
+          <details data-cat="exam"><summary>What happens if I miss the end term?</summary><div class="ans"><p>You need to attend the end term to get a grade. If you miss only the end term and completed everything else, you get an "I" (incomplete) and can write only the end term in a later term. Check your term's grading document for the exact options and fees.</p></div></details>
+          <details data-cat="exam"><summary>What does the end term test?</summary><div class="ans"><p>It's in person, closed book, no internet. The official documents don't give a paper pattern. An older course page described it as testing memory and being easier than the ROE. Revise every week's topics and your own GA work.</p></div></details>
+          <details data-cat="rules"><summary>Are there bonus marks?</summary><div class="ans"><p>Sometimes. The course may post bonus activities on Discourse, email, SEEK or the course site. They are given at the course team's discretion, so don't count on them.</p></div></details>
+          <details data-cat="rules"><summary>Can I do TDS without being enrolled?</summary><div class="ans"><p>Yes. The course is public: anyone can read the content and try the assessments. Only enrolled students get Discourse, project evaluation, the end term and a certificate.</p></div></details>
+          <details data-cat="help"><summary>Who should I ask when I'm stuck?</summary><div class="ans"><p>The course's own order: ask AI first (twice). Then TAs, for learning doubts like "how do I approach this assignment?". Instructors only for exceptions, with proof, like wrong marks or an extension request. The faculty for suggestions about next term's content.</p></div></details>
+          <details data-cat="help"><summary>How do I keep up with announcements?</summary><div class="ans"><p>Check three places daily: SEEK notifications (the bell icon), your email including spam, and TDS Discourse.</p></div></details>
+          <details data-cat="help"><summary>My marks look wrong. What do I do?</summary><div class="ans"><p>Collect proof first: screenshots of your saved submission and the score, with dates. Then contact the instructors through the channel given on the course site. Remember that AI-judged scores can't be appealed.</p></div></details>
+          <details data-cat="rules"><summary>Should I take TDS and MLP together?</summary><div class="ans"><p>MLP is listed as the co-requisite, so many people do. The bigger question is total load: TDS takes more time than a normal course, so keep that term's other courses manageable.</p></div></details>
+        </div>
+        <p class="faq__empty" id="faqEmpty" hidden>Nothing matches. Ask on Discourse, and maybe it ends up here next term.</p>
+      </div>
+    </section>
+  </div>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div>
+      <h2>Good luck. You'll be fine.</h2>
+      <p>If this helped, send it to one person who's about to start TDS. If something here is wrong or out of date, <a href="https://github.com/angadseth/tds-field-guide/issues">open an issue on GitHub</a> and it will get fixed.</p>
+      <p class="sign">Angad Jangir &middot; IIT Madras BS</p>
+    </div>
+    <div>
+      <p><strong>Not an official IIT Madras page.</strong> Facts come from the May 2026 course site, the May 2026 grading document and the course faculty's blog, and were checked in September 2026. Rules change every term, so when this page and the official page disagree, the official page wins.</p>
+      <small>No tracking. Your checklist ticks and calculator numbers stay in your own browser.</small>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "tds-field-guide-checks",
+  "private": true,
+  "description": "Dev-only browser checks for the TDS Field Guide. Not part of the site.",
+  "type": "module",
+  "dependencies": {
+    "playwright": "1.62.1"
+  }
+}
