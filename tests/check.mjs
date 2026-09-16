@@ -188,6 +188,14 @@ console.log("\n[behaviour]");
       if (r.status >= 400) bad.push(`${r.status} ${u}`);
     } catch (e) { bad.push(`ERR ${u}`); }
   }));
+  // A slow site can time out under 30 parallel requests. Retry failures once, one at a time, before calling them broken.
+  for (const entry of [...bad]) {
+    const u = entry.split(" ").pop();
+    try {
+      const r = await fetch(u, { redirect: "follow", headers: { "user-agent": "Mozilla/5.0 tds-field-guide link check" } });
+      if (r.status < 400) bad.splice(bad.indexOf(entry), 1);
+    } catch (e) {}
+  }
   // Discourse needs a login and the GitHub repo may not exist before the first push.
   const expected = (b) => /discourse\.onlinedegree|tds-field-guide/.test(b);
   const real = bad.filter((b) => !expected(b));
