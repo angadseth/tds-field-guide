@@ -49,6 +49,10 @@ Angad's own GA/P1/P2/ROE notes. Discourse needs a login, so it was not used.
 - Credit changed on Angad's request: footer + README now say **"Made by Bharat and Angad Jangir"** (full name added on request),
   checked live on desktop and phone-dark.
 
+- Chapter index fix (Angad's screenshot): the active chapter used a yellow highlighter strip behind light text,
+  unreadable in dark mode. Replaced with the chapter number circled in blue pen + bold title, nothing painted
+  behind text. `tests/toc.mjs` asserts no background, contrast >= 7 and the ring showing, in both themes.
+
 **Still open / not done:**
 - Dates are the May 2026 term's. When the Sep 2026 course page publishes its schedule, update the chart (`ROWS` in
   `assets/app.js`), the GA table, ROE/ET dates and the "May 2026 edition" label.
